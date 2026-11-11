@@ -1,0 +1,935 @@
+<!-- WEBRITE MEET THE BUILDER PAGE | Google Sites Embed -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --blue:#2F5BFF;
+  --ink:#0B0B12;
+  --bg:#EEF0F4;
+  --white:#FFFFFF;
+  --muted:#5A5F6E;
+  --line:#D9DCE4;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  margin:0;
+  padding:0;
+  height:auto;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.5;
+}
+
+.wrap{
+  max-width:1050px;
+  margin:auto;
+  padding:35px 22px 15px;
+}
+
+h1,h2,h3,.brand{
+  font-family:"Space Grotesk",sans-serif;
+}
+
+/* BRAND */
+
+.brand{
+  font-size:42px;
+  font-weight:700;
+  letter-spacing:-2px;
+  line-height:1.1;
+}
+
+.brand span{
+  color:var(--blue);
+}
+
+.tagline{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:var(--blue);
+}
+
+/* HEADER */
+
+.header{
+  padding-bottom:30px;
+  border-bottom:1px solid var(--line);
+}
+
+.header h1{
+  font-size:clamp(32px,5vw,44px);
+  margin:25px 0 12px;
+  letter-spacing:-1px;
+  line-height:1.1;
+}
+
+.header p{
+  color:var(--muted);
+  max-width:720px;
+  margin:0 0 12px;
+}
+
+.header .lead{
+  font-size:17px;
+  color:var(--ink);
+  font-weight:500;
+}
+
+.back{
+  display:inline-block;
+  margin-top:16px;
+  color:var(--blue);
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+
+.back:hover{
+  text-decoration:underline;
+}
+
+/* INTRODUCTION */
+
+.intro{
+  display:grid;
+  grid-template-columns:260px minmax(0,1fr);
+  gap:25px;
+  align-items:start;
+  margin-top:30px;
+}
+
+.photo{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:10px;
+  min-width:0;
+}
+
+.photo-frame{
+  aspect-ratio:4/5;
+  border-radius:12px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#2F5BFF,#0B0B12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.photo-frame img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.photo-fallback{
+  font-family:"Space Grotesk",sans-serif;
+  color:white;
+  font-size:80px;
+  font-weight:700;
+}
+
+.photo-caption{
+  text-align:center;
+  padding:12px 5px 5px;
+}
+
+.photo-caption strong{
+  display:block;
+  font-size:15px;
+}
+
+.photo-caption span{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:3px;
+}
+
+.intro-panel{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:25px;
+}
+
+.intro-panel h2{
+  margin:0 0 14px;
+  font-size:25px;
+}
+
+.intro-panel p{
+  color:var(--muted);
+  font-size:14px;
+  margin:0 0 13px;
+}
+
+.intro-panel p:last-child{
+  margin-bottom:0;
+}
+
+.intro-panel strong{
+  color:var(--ink);
+}
+
+/* SECTIONS */
+
+h2.section-title{
+  font-size:28px;
+  margin:35px 0 17px;
+  letter-spacing:-.6px;
+}
+
+.section-note{
+  color:var(--muted);
+  font-size:14px;
+  margin:-7px 0 17px;
+  max-width:720px;
+}
+
+/* CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:15px;
+}
+
+.card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px;
+  min-width:0;
+}
+
+.card-number{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  border-radius:11px;
+  background:#EDF1FF;
+  color:var(--blue);
+  font-family:"Space Grotesk",sans-serif;
+  font-weight:700;
+  font-size:16px;
+  margin-bottom:14px;
+}
+
+.card h3{
+  margin:0 0 9px;
+  font-size:19px;
+  letter-spacing:-.3px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:13px;
+  margin:0;
+}
+
+/* PORTFOLIO */
+
+.project{
+  display:flex;
+  flex-direction:column;
+}
+
+.project-type{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  margin:0 0 10px;
+}
+
+.project h3{
+  font-size:20px;
+}
+
+.project p{
+  flex:1;
+}
+
+.project-link{
+  display:inline-flex;
+  align-items:center;
+  align-self:flex-start;
+  margin-top:17px;
+  padding:10px 16px;
+  border:1px solid var(--blue);
+  border-radius:999px;
+  color:var(--blue);
+  font-size:13px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.project-link:hover{
+  background:var(--blue);
+  color:white;
+}
+
+/* BENEFITS */
+
+.benefits{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:15px;
+}
+
+.benefit{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:19px;
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+}
+
+.check{
+  width:25px;
+  height:25px;
+  background:#EDF1FF;
+  color:var(--blue);
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  font-weight:700;
+  flex:none;
+}
+
+.benefit strong{
+  display:block;
+  font-size:14px;
+  margin-bottom:5px;
+}
+
+.benefit p{
+  font-size:13px;
+  color:var(--muted);
+  margin:0;
+}
+
+/* CTA */
+
+.cta{
+  margin-top:38px;
+  background:var(--ink);
+  color:white;
+  border-radius:18px;
+  padding:28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+}
+
+.cta h2{
+  font-size:27px;
+  margin:0 0 8px;
+}
+
+.cta p{
+  color:#C9CCD6;
+  font-size:14px;
+  margin:0;
+  max-width:560px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 23px;
+  background:var(--blue);
+  color:white;
+  border:0;
+  border-radius:999px;
+  font:700 15px Inter,sans-serif;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.btn:hover{
+  background:#2146DC;
+}
+
+/* FOOTER — MATCHES GET A QUOTE */
+
+.footer{
+  margin-top:50px;
+  padding-top:25px;
+  border-top:1px solid var(--line);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+}
+
+.footer .brand{
+  font-size:42px;
+}
+
+.footer a{
+  color:var(--blue);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.footer a:hover{
+  text-decoration:underline;
+}
+
+.footer p{
+  width:100%;
+  font-size:12px;
+  color:var(--muted);
+  margin:0;
+}
+
+/* TABLET */
+
+@media(max-width:800px){
+
+  .intro{
+    grid-template-columns:210px minmax(0,1fr);
+    gap:18px;
+  }
+
+  .cards{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+}
+
+/* MOBILE */
+
+@media(max-width:560px){
+
+  .wrap{
+    padding:25px 18px 15px;
+  }
+
+  .header h1{
+    font-size:32px;
+  }
+
+  .header{
+    padding-bottom:23px;
+  }
+
+  .intro{
+    grid-template-columns:1fr;
+    gap:15px;
+    margin-top:23px;
+  }
+
+  .photo{
+    max-width:270px;
+    width:100%;
+    margin:auto;
+  }
+
+  .intro-panel{
+    padding:20px;
+  }
+
+  .intro-panel h2{
+    font-size:23px;
+  }
+
+  h2.section-title{
+    font-size:25px;
+    margin:30px 0 15px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .card{
+    padding:20px;
+  }
+
+  .benefits{
+    grid-template-columns:1fr;
+    gap:11px;
+  }
+
+  .benefit{
+    padding:17px;
+  }
+
+  .cta{
+    flex-direction:column;
+    align-items:flex-start;
+    margin-top:30px;
+    padding:23px;
+  }
+
+  .cta h2{
+    font-size:24px;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .footer{
+    margin-top:35px;
+    padding-top:20px;
+    gap:16px;
+  }
+
+  .footer .brand{
+    font-size:36px;
+  }
+
+  .footer a{
+    font-size:13px;
+  }
+
+}
+
+/* PREVENT UNNECESSARY BOTTOM SPACE */
+
+body{
+  min-height:0;
+}
+
+.wrap::after{
+  content:none;
+}
+
+</style>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+
+  <header class="header">
+
+    <div class="brand">
+      Web<span>Rite</span>
+    </div>
+
+    <div class="tagline">
+      WEBSITES THAT WORK
+    </div>
+
+    <h1>Meet Your Website Builder</h1>
+
+    <p class="lead">
+      Hi, I'm Trey. I build websites for small businesses
+      because I run small businesses myself.
+    </p>
+
+    <p>
+      My goal is simple: build websites that attract customers,
+      generate leads, and help business owners operate more efficiently.
+    </p>
+
+    <a class="back"
+       href="https://www.webrite.net"
+       target="_top">
+      ← Back to Homepage
+    </a>
+
+  </header>
+
+  <!-- INTRODUCTION -->
+
+  <section class="intro">
+
+    <div class="photo">
+
+      <div class="photo-frame" id="photoFrame"></div>
+
+      <div class="photo-caption">
+        <strong>Trey</strong>
+        <span>Founder &amp; Website Builder</span>
+      </div>
+
+    </div>
+
+    <div class="intro-panel">
+
+      <h2>A business owner building for business owners.</h2>
+
+      <p>
+        I founded <strong>In Home Infusion</strong>, a mobile IV
+        therapy company connecting patients with licensed nurses
+        across more than 30 U.S. markets.
+      </p>
+
+      <p>
+        I built and manage its website, along with websites
+        for my private bartending business and legal staffing venture.
+      </p>
+
+      <p>
+        These projects have given me firsthand experience with
+        customer acquisition, online booking, lead generation,
+        business automation, and digital marketing.
+      </p>
+
+      <p>
+        I also hold a bachelor's degree in psychology from
+        Arizona State University. That background influences
+        how I structure websites around customer behavior,
+        decision-making, and clear calls to action.
+      </p>
+
+      <p>
+        <strong>When you work with WebRite, you work directly
+        with me.</strong> No account managers, no unnecessary
+        hand-offs, and no confusing technical explanations.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- WHAT I BRING -->
+
+  <h2 class="section-title">
+    What I Bring to Your Website
+  </h2>
+
+  <div class="cards">
+
+    <article class="card">
+
+      <div class="card-number">01</div>
+
+      <h3>Business Experience</h3>
+
+      <p>
+        I've handled recruiting, scheduling, marketing,
+        and customer inquiries.
+
+        Your website is built around how customers
+        actually find and interact with your business.
+      </p>
+
+    </article>
+
+    <article class="card">
+
+      <div class="card-number">02</div>
+
+      <h3>Customer Psychology</h3>
+
+      <p>
+        My psychology background helps me design websites
+        with clear messaging, straightforward navigation,
+        and calls to action that guide visitors toward
+        becoming customers.
+      </p>
+
+    </article>
+
+    <article class="card">
+
+      <div class="card-number">03</div>
+
+      <h3>Business Automation</h3>
+
+      <p>
+        From instant quote calculators and booking forms
+        to automated notifications and CRM integrations,
+        I build practical tools that save business owners time.
+      </p>
+
+    </article>
+
+  </div>
+
+  <!-- PORTFOLIO -->
+
+  <h2 class="section-title">
+    Businesses I've Built For
+  </h2>
+
+  <p class="section-note">
+    Real businesses, real websites, and practical solutions
+    built around everyday operations.
+  </p>
+
+  <div class="cards" id="projects"></div>
+
+  <!-- BENEFITS -->
+
+  <h2 class="section-title">
+    What Working With Me Looks Like
+  </h2>
+
+  <div class="benefits">
+
+    <div class="benefit">
+      <div class="check">✓</div>
+      <div>
+        <strong>Direct Communication</strong>
+        <p>
+          The person you speak with is the person
+          building your website.
+        </p>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <div class="check">✓</div>
+      <div>
+        <strong>Plain-English Explanations</strong>
+        <p>
+          I'll explain your options without overwhelming
+          you with technical jargon.
+        </p>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <div class="check">✓</div>
+      <div>
+        <strong>You Own Your Domain</strong>
+        <p>
+          Your business maintains ownership of its domain name.
+        </p>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <div class="check">✓</div>
+      <div>
+        <strong>Transparent Pricing</strong>
+        <p>
+          Clear website setup fees with optional
+          monthly maintenance.
+        </p>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <div class="check">✓</div>
+      <div>
+        <strong>Local Business Focus</strong>
+        <p>
+          Serving Riverside, the Inland Empire,
+          Los Angeles, Orange County, San Diego,
+          and businesses beyond Southern California.
+        </p>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <div class="check">✓</div>
+      <div>
+        <strong>Ongoing Support</strong>
+        <p>
+          Optional maintenance and automation support
+          as your business grows.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div>
+
+      <h2>Let's Build Your Website</h2>
+
+      <p>
+        Tell me about your business, choose your preferred
+        features, and request a personalized quote.
+        I'll follow up within one business day.
+      </p>
+
+    </div>
+
+    <a class="btn"
+       href="https://www.webrite.net/get-a-quote"
+       target="_top">
+      Get My Quote →
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div>
+
+      <div class="brand">
+        Web<span>Rite</span>
+      </div>
+
+      <div class="tagline">
+        WEBSITES THAT WORK
+      </div>
+
+    </div>
+
+    <div>
+
+      <a href="https://www.webrite.net"
+         target="_top">
+        Home
+      </a>
+
+      &nbsp; · &nbsp;
+
+      <a href="https://www.webrite.net/get-a-quote"
+         target="_top">
+        Get a Quote
+      </a>
+
+      &nbsp; · &nbsp;
+
+      <a href="https://www.webrite.net/privacy"
+         target="_top">
+        Privacy
+      </a>
+
+    </div>
+
+    <p>
+      © 2026 WebRite · Websites That Work.
+      Serving Riverside, the Inland Empire, Los Angeles,
+      Orange County, San Diego &amp; beyond.
+    </p>
+
+  </footer>
+
+</div>
+
+<script>
+
+/* PROFILE PHOTO */
+
+const PHOTO_ID =
+  "1HncjnvCaNSV1ROMVOnjgIo1HqxxEpS4D";
+
+const photoFrame =
+  document.getElementById("photoFrame");
+
+const profileImage = new Image();
+
+profileImage.alt =
+  "Trey, founder and website builder at WebRite";
+
+profileImage.src =
+  "https://lh3.googleusercontent.com/d/" +
+  PHOTO_ID +
+  "=w900";
+
+profileImage.onerror = function(){
+
+  photoFrame.innerHTML =
+    '<span class="photo-fallback">T</span>';
+
+};
+
+photoFrame.appendChild(profileImage);
+
+
+/* PORTFOLIO */
+
+const PROJECTS = [
+
+  {
+    name:"In Home Infusion",
+    type:"Mobile IV Therapy · WordPress + Automation",
+    url:"https://inhomeinfusion.com",
+    description:
+      "The mobile IV therapy company I founded. Patients across 30+ markets can explore treatments, review pricing, and request appointments."
+  },
+
+  {
+    name:"Pour Live",
+    type:"Private Bartending · Google Sites",
+    url:"https://www.pourlive.com",
+    description:
+      "My private event bartending business, featuring a professional website, automated estimates, and booking inquiries."
+  },
+
+  {
+    name:"Legal Console",
+    type:"Legal Staffing · WordPress",
+    url:"https://legalconsole.net",
+    description:
+      "My legal recruiting venture, designed to connect legal professionals with law firms through a professional digital presence."
+  }
+
+];
+
+function escapeHTML(value){
+
+  return String(value).replace(
+    /[&<>"']/g,
+    character => ({
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#39;"
+    }[character])
+  );
+
+}
+
+document.getElementById("projects").innerHTML =
+  PROJECTS.map(project => `
+
+    <article class="card project">
+
+      <div class="project-type">
+        ${escapeHTML(project.type)}
+      </div>
+
+      <h3>
+        ${escapeHTML(project.name)}
+      </h3>
+
+      <p>
+        ${escapeHTML(project.description)}
+      </p>
+
+      <a
+        class="project-link"
+        href="${escapeHTML(project.url)}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visit Website →
+      </a>
+
+    </article>
+
+  `).join("");
+
+</script>
