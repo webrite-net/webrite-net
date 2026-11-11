@@ -1,0 +1,1229 @@
+<!-- WEBRITE HOMEPAGE | Google Sites Embed -->
+<!-- Updated navigation + extra mobile footer scrolling space -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue:#2F5BFF;
+  --ink:#0B0B12;
+  --bg:#EEF0F4;
+  --white:#FFFFFF;
+  --muted:#5A5F6E;
+  --line:#D9DCE4;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html,body {
+  margin:0;
+  padding:0;
+  height:auto;
+  overflow-x:hidden;
+  font-family:Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+.wrap {
+  max-width:1100px;
+  margin:auto;
+  padding:35px 22px 90px;
+}
+
+h1,h2,h3,.brand {
+  font-family:"Space Grotesk",sans-serif;
+}
+
+h2 {
+  font-size:32px;
+  letter-spacing:-1px;
+  margin:42px 0 20px;
+}
+
+/* HERO */
+
+.hero {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:35px;
+  padding-bottom:40px;
+  border-bottom:1px solid var(--line);
+}
+
+.identity {
+  flex:0 1 320px;
+}
+
+.logo-row {
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo-icon {
+  width:70px;
+  height:70px;
+  flex:none;
+}
+
+.brand {
+  font-size:55px;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:-3px;
+}
+
+.brand span {
+  color:var(--blue);
+}
+
+.tagline {
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:var(--blue);
+  margin-top:6px;
+}
+
+.hero-copy {
+  flex:1 1 320px;
+  min-width:0;
+}
+
+.hero h1 {
+  font-size:clamp(29px,4vw,43px);
+  line-height:1.12;
+  letter-spacing:-1.5px;
+  margin:0 0 15px;
+}
+
+.hero p {
+  color:var(--muted);
+  margin:0 0 22px;
+}
+
+.cta {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 25px;
+  border-radius:50px;
+  background:var(--blue);
+  color:white!important;
+  text-decoration:none;
+  font-weight:700;
+  font-size:15px;
+  min-height:50px;
+  text-align:center;
+  transition:background .2s ease;
+}
+
+.cta:hover {
+  background:#2146DC;
+}
+
+.cta-outline {
+  background:transparent;
+  border:2px solid var(--blue);
+  color:var(--blue)!important;
+}
+
+.cta-outline:hover {
+  background:#E4EAFF;
+}
+
+.hero-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+/* SEO SECTION */
+
+.seo {
+  background:linear-gradient(135deg,#142045,#0B0B12);
+  color:white;
+  padding:32px;
+  border-radius:24px;
+  margin-top:35px;
+  border:1px solid #29345E;
+}
+
+.eyebrow {
+  color:#AFC3FF;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:700;
+}
+
+.seo h2 {
+  color:white;
+  margin:10px 0 14px;
+}
+
+.seo h2 span {
+  color:#85A5FF;
+}
+
+.seo-lead {
+  color:#D9E0F5;
+  font-size:15px;
+  max-width:850px;
+}
+
+.locations {
+  color:#B8C6E8;
+  font-size:13px;
+  margin:16px 0 24px;
+}
+
+.services {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:15px;
+}
+
+.service {
+  background:white;
+  color:var(--ink);
+  border-radius:17px;
+  padding:22px;
+  min-width:0;
+}
+
+.service-icon {
+  width:45px;
+  height:45px;
+  border-radius:13px;
+  background:#E6EDFF;
+  color:var(--blue);
+  display:grid;
+  place-items:center;
+  font-size:23px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.service h3 {
+  font-size:18px;
+  margin:0 0 9px;
+}
+
+.service p {
+  color:#535D75;
+  font-size:14px;
+  margin:0 0 12px;
+}
+
+.service ul {
+  margin:0;
+  padding-left:20px;
+  color:#263557;
+  font-size:13px;
+}
+
+.service li {
+  margin:5px 0;
+}
+
+/* PORTFOLIO */
+
+.carousel-shell {
+  position:relative;
+  min-width:0;
+}
+
+.work {
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  padding:5px 2px 15px;
+  scrollbar-width:thin;
+}
+
+.project {
+  flex:0 0 calc((100% - 32px)/3);
+  min-width:0;
+  scroll-snap-align:start;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:16px;
+}
+
+.screen {
+  background:#1C1D24;
+  padding:7px 7px 0;
+  border-radius:10px 10px 0 0;
+}
+
+.view {
+  height:155px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#2F5BFF,#0B0B12);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-weight:700;
+}
+
+.view img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top;
+}
+
+.base {
+  height:10px;
+  background:#C9CDD6;
+  border-radius:0 0 8px 8px;
+  margin:0 -4%;
+}
+
+.project h3 {
+  margin:15px 0 4px;
+  font-size:19px;
+}
+
+.project p {
+  color:var(--muted);
+  font-size:13px;
+  margin:0 0 15px;
+}
+
+.visit {
+  display:inline-block;
+  border:2px solid var(--blue);
+  color:var(--blue);
+  padding:9px 17px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:700;
+}
+
+.visit:hover {
+  background:#E8EDFF;
+}
+
+.carousel-controls {
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:10px;
+  margin-top:10px;
+}
+
+.carousel-controls button {
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:white;
+  color:var(--blue);
+  font-size:25px;
+  cursor:pointer;
+}
+
+.carousel-controls button:disabled {
+  opacity:.3;
+}
+
+.carousel-status {
+  margin-right:auto;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* PRICING */
+
+.plans {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(235px,1fr));
+  gap:16px;
+}
+
+.plan {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:23px;
+  min-width:0;
+}
+
+.plan.featured {
+  border:2px solid var(--blue);
+}
+
+.plan h3 {
+  margin:0 0 7px;
+  font-size:20px;
+}
+
+.price {
+  font-family:"Space Grotesk",sans-serif;
+  color:var(--blue);
+  font-weight:700;
+  font-size:29px;
+  letter-spacing:-1px;
+}
+
+.price small {
+  color:var(--muted);
+  font-size:13px;
+  font-family:Inter,sans-serif;
+  font-weight:400;
+}
+
+.monthly {
+  font-size:14px;
+  font-weight:600;
+  margin:8px 0;
+}
+
+.plan ul {
+  padding-left:19px;
+  font-size:14px;
+  margin:14px 0;
+}
+
+.plan li {
+  margin-bottom:7px;
+}
+
+.note {
+  color:var(--muted);
+  font-size:13px;
+  margin-top:16px;
+}
+
+/* QUOTE CTA */
+
+.quote-banner {
+  margin-top:45px;
+  background:var(--ink);
+  border-radius:22px;
+  padding:32px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  color:white;
+}
+
+.quote-banner h2 {
+  margin:0 0 8px;
+  color:white;
+  font-size:28px;
+}
+
+.quote-banner p {
+  margin:0;
+  color:#C8D5F6;
+  font-size:14px;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top:55px;
+  border-top:1px solid var(--line);
+  padding-top:28px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer .brand {
+  font-size:35px;
+}
+
+.footer h4 {
+  color:var(--blue);
+  margin:0 0 10px;
+  font-size:14px;
+}
+
+.footer a,
+.footer p {
+  display:block;
+  text-decoration:none;
+  color:var(--ink);
+  font-size:14px;
+  margin:0 0 8px;
+}
+
+.footer a:hover {
+  color:var(--blue);
+}
+
+.footer-cols {
+  display:flex;
+  flex-wrap:wrap;
+  gap:35px;
+}
+
+.copyright {
+  width:100%;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px) {
+  .services {
+    grid-template-columns:1fr;
+  }
+
+  .project {
+    flex-basis:calc((100% - 16px)/2);
+  }
+}
+
+@media(max-width:560px) {
+  .wrap {
+    padding:25px 18px 75px;
+  }
+
+  .brand {
+    font-size:45px;
+  }
+
+  .logo-icon {
+    width:55px;
+    height:55px;
+  }
+
+  .hero {
+    gap:25px;
+  }
+
+  .hero h1 {
+    font-size:31px;
+  }
+
+  h2 {
+    font-size:27px;
+  }
+
+  .seo {
+    padding:24px 18px;
+  }
+
+  .project {
+    flex-basis:85%;
+  }
+
+  .quote-banner {
+    padding:25px;
+  }
+
+  .quote-banner h2 {
+    font-size:25px;
+  }
+
+  .footer-cols {
+    gap:25px;
+  }
+}
+
+/* EXTRA MOBILE FOOTER SCROLLING SPACE */
+
+@media(max-width:768px) {
+  .wrap {
+    padding-bottom:250px !important;
+  }
+
+  .footer {
+    margin-bottom:100px !important;
+  }
+}
+
+</style>
+
+<div class="wrap">
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="identity">
+      <div class="logo-row">
+
+        <svg class="logo-icon" viewBox="0 0 100 100" aria-hidden="true">
+          <rect width="100" height="100" rx="25" fill="#2F5BFF"/>
+
+          <path
+            d="M20 36 L35 70 L50 46 L65 70 L84 25"
+            fill="none"
+            stroke="white"
+            stroke-width="9"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <div>
+          <div class="brand">Web<span>Rite</span></div>
+          <div class="tagline">WEBSITES THAT WORK</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hero-copy">
+
+      <h1>
+        Website Design for Riverside,
+        Orange County &amp; San Diego Businesses
+      </h1>
+
+      <p>
+        WebRite builds affordable, mobile-friendly websites
+        for small businesses in Riverside, the Inland Empire,
+        Los Angeles, Orange County, San Diego, and beyond.
+
+        From simple websites to booking forms, instant quotes,
+        and automated lead notifications.
+      </p>
+
+      <div class="hero-actions">
+
+        <a
+          class="cta"
+          href="https://sites.google.com/view/webritenet/home/get-a-quote"
+          target="_top"
+        >
+          Get a Free Website Quote →
+        </a>
+
+        <a
+          class="cta cta-outline"
+          href="https://sites.google.com/view/webritenet/home/meet-your-builder"
+          target="_top"
+        >
+          Meet the Builder
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- SEO / SERVICES -->
+
+  <section class="seo">
+
+    <div class="eyebrow">
+      BUILT FOR BUSINESSES READY TO GROW
+    </div>
+
+    <h2>
+      Small Business Web Design
+      <span>&amp; Website Automation</span>
+    </h2>
+
+    <p class="seo-lead">
+      WebRite helps businesses across Riverside, the Inland Empire,
+      Los Angeles, Orange County, and San Diego turn website
+      visitors into real inquiries and bookings.
+
+      Whether you need a simple business website or advanced
+      automations, we focus on professional design,
+      mobile performance, and customer conversion.
+    </p>
+
+    <p class="locations">
+      📍 Based in the Inland Empire · Serving Riverside,
+      Los Angeles, Orange County, San Diego
+      &amp; businesses nationwide
+    </p>
+
+    <div class="services">
+
+      <article class="service">
+
+        <div class="service-icon">▣</div>
+
+        <h3>Affordable Website Design</h3>
+
+        <p>
+          Professional websites for independent professionals,
+          startups, and growing small businesses.
+        </p>
+
+        <ul>
+          <li>Mobile-first layouts</li>
+          <li>Custom branding</li>
+          <li>Contact and lead forms</li>
+          <li>Custom domain connection</li>
+        </ul>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-icon">▤</div>
+
+        <h3>Business Website Development</h3>
+
+        <p>
+          Customized websites built around your business,
+          without unnecessary hosting expenses.
+        </p>
+
+        <ul>
+          <li>Single and multi-page websites</li>
+          <li>Google Sites or WordPress options</li>
+          <li>Responsive design</li>
+          <li>SEO foundations</li>
+        </ul>
+
+      </article>
+
+      <article class="service">
+
+        <div class="service-icon">⚡</div>
+
+        <h3>Business Automation</h3>
+
+        <p>
+          Booking forms, quote calculators, lead notifications,
+          and connected workflows that reduce manual follow-up.
+        </p>
+
+        <ul>
+          <li>Instant lead notifications</li>
+          <li>Booking and quote workflows</li>
+          <li>CRM integrations</li>
+          <li>AI-assisted customer communication</li>
+        </ul>
+
+      </article>
+
+    </div>
+
+    <p style="color:#C8D5F6;font-size:13px;margin-top:22px">
+
+      <strong style="color:white">
+        Websites that work.
+      </strong>
+
+      Designed to look sharp, capture leads,
+      and simplify your day.
+
+    </p>
+
+  </section>
+
+  <!-- PORTFOLIO -->
+
+  <h2>Recent Work</h2>
+
+  <div class="carousel-shell">
+
+    <div
+      class="work"
+      id="work"
+      aria-label="Website portfolio"
+    ></div>
+
+    <div class="carousel-controls">
+
+      <span
+        class="carousel-status"
+        id="carouselStatus"
+      ></span>
+
+      <button
+        id="carouselPrev"
+        type="button"
+        aria-label="Previous project"
+      >
+        ‹
+      </button>
+
+      <button
+        id="carouselNext"
+        type="button"
+        aria-label="Next project"
+      >
+        ›
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- PRICING -->
+
+  <h2>Website Packages</h2>
+
+  <div class="plans" id="plans"></div>
+
+  <p class="note" id="policy"></p>
+
+  <!-- BOTTOM CTA -->
+
+  <section class="quote-banner">
+
+    <div>
+
+      <h2>
+        Ready to Build a Website That Works?
+      </h2>
+
+      <p>
+        Tell us about your business and receive
+        a personalized website quote.
+      </p>
+
+    </div>
+
+    <a
+      class="cta"
+      href="https://sites.google.com/view/webritenet/home/get-a-quote"
+      target="_top"
+    >
+      Get My Quote →
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div>
+
+      <div class="brand">
+        Web<span>Rite</span>
+      </div>
+
+      <div class="tagline">
+        WEBSITES THAT WORK
+      </div>
+
+    </div>
+
+    <div class="footer-cols">
+
+      <div>
+
+        <h4>Explore</h4>
+
+        <a
+          href="https://sites.google.com/view/webritenet/home"
+          target="_top"
+        >
+          Home
+        </a>
+
+        <a
+          href="https://sites.google.com/view/webritenet/home/meet-your-builder"
+          target="_top"
+        >
+          Meet the Builder
+        </a>
+
+        <a
+          href="https://sites.google.com/view/webritenet/home/get-a-quote"
+          target="_top"
+        >
+          Get a Quote
+        </a>
+
+      </div>
+
+      <div>
+
+        <h4>Help</h4>
+
+        <a
+          href="https://www.webrite.net/faq"
+          target="_top"
+        >
+          FAQ
+        </a>
+
+        <a
+          href="https://www.webrite.net/privacy"
+          target="_top"
+        >
+          Privacy
+        </a>
+
+      </div>
+
+      <div>
+
+        <h4>Service Areas</h4>
+
+        <p>Riverside</p>
+        <p>Inland Empire</p>
+        <p>Los Angeles</p>
+        <p>Orange County</p>
+        <p>San Diego</p>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 WebRite · Websites That Work.
+    </div>
+
+  </footer>
+
+</div>
+
+<script>
+/*
+  WEBRITE HOMEPAGE JAVASCRIPT
+  Updated navigation + portfolio carousel
+*/
+
+const $ = id => document.getElementById(id);
+
+const QUOTE_URL =
+  "https://sites.google.com/view/webritenet/home/get-a-quote";
+
+const BUILDER_URL =
+  "https://sites.google.com/view/webritenet/home/meet-your-builder";
+
+/* WEBSITE PACKAGES */
+
+const CONFIG = {
+
+  packages: [
+
+    {
+      id:"Solo",
+      setup:"$199–$299",
+      monthly:"Optional $0–$35/mo",
+      featured:false,
+
+      perks:[
+        "Essential one-page website",
+        "Mobile-friendly design",
+        "Contact form",
+        "Custom domain connection",
+        "HTTPS included",
+        "No custom email included"
+      ]
+    },
+
+    {
+      id:"Starter",
+      setup:"$399–$599",
+      monthly:"Optional $25–$75/mo",
+      featured:true,
+
+      perks:[
+        "Premium customized website",
+        "Service sections, gallery and FAQs",
+        "Lead capture forms",
+        "Custom domain connection",
+        "Optional branded email setup",
+        "Optional maintenance and updates"
+      ]
+    },
+
+    {
+      id:"Growth",
+      setup:"$599–$899",
+      monthly:"Optional $75–$129/mo",
+      featured:false,
+
+      perks:[
+        "Everything in Starter",
+        "Multi-page website when needed",
+        "Booking or estimate workflows",
+        "Local SEO foundations",
+        "Optional professional email setup"
+      ]
+    },
+
+    {
+      id:"Automation",
+      setup:"$699–$1,200+",
+      monthly:"Optional $99–$199+/mo",
+      featured:false,
+
+      perks:[
+        "Custom business website",
+        "Instant quotes and booking workflows",
+        "Automated lead notifications",
+        "CRM, email or SMS integrations",
+        "Optional branded email setup",
+        "Third-party usage billed separately"
+      ]
+    }
+
+  ],
+
+  policy:
+    "One-time website setup. Ongoing care is optional. " +
+    "Domain renewals, paid email mailboxes, SMS and third-party " +
+    "tools are billed separately when applicable. " +
+    "Professional email setup is available beginning with Starter."
+
+};
+
+/* PORTFOLIO */
+
+const PORTFOLIO = [
+
+  {
+    name:"Pour Live",
+    type:"Private Bartending · Google Sites",
+    url:"https://www.pourlive.com",
+    screenshot:""
+  },
+
+  {
+    name:"Legal Console",
+    type:"Legal Staffing · Website Development",
+    url:"https://legalconsole.net",
+    screenshot:""
+  },
+
+  {
+    name:"In Home Infusion",
+    type:"Mobile IV Therapy · Business Automation",
+    url:"https://inhomeinfusion.com",
+    screenshot:"1I5f-9g9WyNlqGauP3i95GXw7NrpNPHeC"
+  }
+
+];
+
+/* HTML ESCAPING */
+
+const esc = s =>
+  String(s).replace(/[&<>"']/g,c=>({
+
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+
+  }[c]));
+
+/* PORTFOLIO SCREENSHOTS */
+
+const shot = p => p.screenshot
+
+  ? (
+      p.screenshot.startsWith("http")
+
+      ? p.screenshot
+
+      : `https://lh3.googleusercontent.com/d/${p.screenshot}=w1000`
+    )
+
+  : `https://s.wordpress.com/mshots/v1/${encodeURIComponent(p.url)}?w=1200&h=750`;
+
+/* RENDER PORTFOLIO */
+
+$("work").innerHTML = PORTFOLIO.map(p=>`
+
+  <article class="project">
+
+    <div class="screen">
+
+      <div class="view">
+
+        <img
+          src="${esc(shot(p))}"
+          alt="${esc(p.name)} website screenshot"
+          data-name="${esc(p.name)}"
+          loading="lazy"
+        >
+
+      </div>
+
+    </div>
+
+    <div class="base"></div>
+
+    <h3>${esc(p.name)}</h3>
+
+    <p>${esc(p.type)}</p>
+
+    <a
+      class="visit"
+      href="${esc(p.url)}"
+      target="_blank"
+      rel="noopener"
+    >
+      Visit Website
+    </a>
+
+  </article>
+
+`).join("");
+
+/* SCREENSHOT FALLBACK */
+
+$("work").querySelectorAll("img").forEach(img=>{
+
+  img.addEventListener("error",()=>{
+
+    const fallback=document.createElement("span");
+
+    fallback.textContent=img.dataset.name;
+
+    img.replaceWith(fallback);
+
+  });
+
+});
+
+/* RENDER PRICING */
+
+$("plans").innerHTML = CONFIG.packages.map(p=>`
+
+  <article class="plan ${p.featured?"featured":""}">
+
+    <h3>
+      ${p.id}${p.featured?" · Most Popular":""}
+    </h3>
+
+    <div class="price">
+
+      ${p.setup}
+
+      <small>setup</small>
+
+    </div>
+
+    <div class="monthly">
+      ${p.monthly}
+    </div>
+
+    <ul>
+
+      ${p.perks.map(x=>`
+        <li>${esc(x)}</li>
+      `).join("")}
+
+    </ul>
+
+    <a
+      class="visit"
+      href="${QUOTE_URL}"
+      target="_top"
+    >
+      Request Quote →
+    </a>
+
+  </article>
+
+`).join("");
+
+$("policy").textContent=CONFIG.policy;
+
+/* HORIZONTAL PORTFOLIO CAROUSEL */
+
+const track=$("work");
+
+const prev=$("carouselPrev");
+
+const next=$("carouselNext");
+
+function step(){
+
+  const card=track.querySelector(".project");
+
+  return card
+
+    ? card.getBoundingClientRect().width+16
+
+    : track.clientWidth;
+
+}
+
+function updateCarousel(){
+
+  const max=Math.max(
+    0,
+    track.scrollWidth-track.clientWidth
+  );
+
+  prev.disabled=track.scrollLeft<=3;
+
+  next.disabled=track.scrollLeft>=max-3;
+
+  const total=PORTFOLIO.length;
+
+  const index=Math.min(
+
+    total,
+
+    Math.max(
+      1,
+      Math.round(track.scrollLeft/step())+1
+    )
+
+  );
+
+  $("carouselStatus").textContent=
+    `${index} of ${total} projects · Swipe to explore`;
+
+}
+
+prev.addEventListener("click",()=>{
+
+  track.scrollBy({
+
+    left:-step(),
+
+    behavior:"smooth"
+
+  });
+
+});
+
+next.addEventListener("click",()=>{
+
+  track.scrollBy({
+
+    left:step(),
+
+    behavior:"smooth"
+
+  });
+
+});
+
+track.addEventListener(
+  "scroll",
+  updateCarousel,
+  {passive:true}
+);
+
+window.addEventListener(
+  "resize",
+  updateCarousel
+);
+
+updateCarousel();
+
+</script>
