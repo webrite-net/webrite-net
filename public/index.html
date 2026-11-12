@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WebRite | Website Design for Riverside, Orange County &amp; San Diego Businesses</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232F5BFF'/><path d='M20 36 L35 70 L50 46 L65 70 L84 25' fill='none' stroke='white' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <meta name="description" content="WebRite builds affordable, mobile-friendly websites for small businesses in Riverside, the Inland Empire, Los Angeles, Orange County, San Diego, and beyond.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,6 +47,19 @@ h2 {
   letter-spacing:-1px;
   margin:42px 0 20px;
 }
+
+/* SITE MENU */
+
+.site-nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.site-nav .in{max-width:1100px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}
+.site-nav .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font:700 22px "Space Grotesk",Inter,sans-serif;letter-spacing:-1px}
+.site-nav .logo b{color:var(--blue);font-weight:700}
+.site-nav nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.site-nav nav a{color:var(--ink);text-decoration:none;font:600 14px Inter,sans-serif}
+.site-nav nav a:hover,.site-nav nav a[aria-current="page"]{color:var(--blue)}
+.site-nav nav a.nav-cta{background:var(--blue);color:#fff;padding:8px 16px;border-radius:50px}
+.site-nav nav a.nav-cta:hover{background:#2146DC;color:#fff}
+@media(max-width:560px){.site-nav .in{padding:10px 18px}.site-nav nav{gap:6px 14px}.site-nav nav a{font-size:13px}.site-nav nav a.nav-cta{padding:6px 12px}}
 
 /* HERO */
 
@@ -499,6 +513,21 @@ h2 {
 
 <body>
 
+<header class="site-nav">
+  <div class="in">
+    <a class="logo" href="/">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="25" fill="#2F5BFF"/><path d="M20 36 L35 70 L50 46 L65 70 L84 25" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Web<b>Rite</b></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/meet-your-builder">Meet Your Builder</a>
+      <a href="/faqs">FAQs</a>
+      <a class="nav-cta" href="/get-a-quote">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
 <div class="wrap">
 
   <!-- HERO -->
@@ -528,8 +557,8 @@ h2 {
         and automated lead notifications.
       </p>
       <div class="hero-actions">
-        <a class="cta" href="https://sites.google.com/view/webritenet/home/get-a-quote" target="_top">Get a Free Website Quote &rarr;</a>
-        <a class="cta cta-outline" href="https://sites.google.com/view/webritenet/home/meet-your-builder" target="_top">Meet the Builder</a>
+        <a class="cta" href="/get-a-quote">Get a Free Website Quote &rarr;</a>
+        <a class="cta cta-outline" href="/meet-your-builder">Meet Your Builder</a>
       </div>
     </div>
 
@@ -651,7 +680,7 @@ h2 {
       <h2>Ready to Build a Website That Works?</h2>
       <p>Tell us about your business and receive a personalized website quote.</p>
     </div>
-    <a class="cta" href="https://sites.google.com/view/webritenet/home/get-a-quote" target="_top">Get My Quote &rarr;</a>
+    <a class="cta" href="/get-a-quote">Get My Quote &rarr;</a>
   </section>
 
   <!-- FOOTER -->
@@ -666,14 +695,15 @@ h2 {
     <div class="footer-cols">
       <div>
         <h4>Explore</h4>
-        <a href="https://sites.google.com/view/webritenet/home" target="_top">Home</a>
-        <a href="https://sites.google.com/view/webritenet/home/meet-your-builder" target="_top">Meet the Builder</a>
-        <a href="https://sites.google.com/view/webritenet/home/get-a-quote" target="_top">Get a Quote</a>
+        <a href="/">Home</a>
+        <a href="/meet-your-builder">Meet Your Builder</a>
+        <a href="/get-a-quote">Get a Quote</a>
       </div>
       <div>
         <h4>Help</h4>
-        <a href="https://www.webrite.net/faq" target="_top">FAQ</a>
-        <a href="https://www.webrite.net/privacy" target="_top">Privacy</a>
+        <a href="/faqs">FAQs</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/privacy">Privacy</a>
       </div>
       <div>
         <h4>Service Areas</h4>
@@ -696,8 +726,8 @@ h2 {
 
 const $ = id => document.getElementById(id);
 
-const QUOTE_URL = "https://sites.google.com/view/webritenet/home/get-a-quote";
-const BUILDER_URL = "https://sites.google.com/view/webritenet/home/meet-your-builder";
+const QUOTE_URL = "/get-a-quote";
+const BUILDER_URL = "/meet-your-builder";
 
 /* WEBSITE PACKAGES */
 
@@ -837,7 +867,7 @@ $("plans").innerHTML = CONFIG.packages.map(p => `
     <div class="price">${p.setup} <small>setup</small></div>
     <div class="monthly">${p.monthly}</div>
     <ul>${p.perks.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
-    <a class="visit" href="${QUOTE_URL}" target="_top">Request Quote \u2192</a>
+    <a class="visit" href="${QUOTE_URL}">Request Quote \u2192</a>
   </article>
 `).join("");
 
