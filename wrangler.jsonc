@@ -1,11 +1,11 @@
 {
-  "name": "pourlive-com",
+  "name": "webrite-net",
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./public"
   },
   "routes": [
-    { "pattern": "pourlive.com", "custom_domain": true },
-    { "pattern": "www.pourlive.com", "custom_domain": true }
+    { "pattern": "webrite.net", "custom_domain": true },
+    { "pattern": "www.webrite.net", "custom_domain": true }
   ]
 }
