@@ -1,6 +1,14 @@
-<!-- WEBRITE MEET THE BUILDER PAGE | Google Sites Embed -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meet Your Builder | WebRite</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232F5BFF'/><path d='M20 36 L35 70 L50 46 L65 70 L84 25' fill='none' stroke='white' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta name="description" content="Meet Trey, the founder behind WebRite. A small business owner building affordable, lead-generating websites for businesses in Riverside, the Inland Empire, Los Angeles, Orange County, and San Diego.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -13,9 +21,7 @@
   --line:#D9DCE4;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{ box-sizing:border-box; }
 
 html,body{
   margin:0;
@@ -28,15 +34,26 @@ html,body{
   line-height:1.5;
 }
 
+/* SITE MENU */
+
+.site-nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.site-nav .in{max-width:1100px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}
+.site-nav .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font:700 22px "Space Grotesk",Inter,sans-serif;letter-spacing:-1px}
+.site-nav .logo b{color:var(--blue);font-weight:700}
+.site-nav nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.site-nav nav a{color:var(--ink);text-decoration:none;font:600 14px Inter,sans-serif}
+.site-nav nav a:hover,.site-nav nav a[aria-current="page"]{color:var(--blue)}
+.site-nav nav a.nav-cta{background:var(--blue);color:#fff;padding:8px 16px;border-radius:50px}
+.site-nav nav a.nav-cta:hover{background:#2146DC;color:#fff}
+@media(max-width:560px){.site-nav .in{padding:10px 18px}.site-nav nav{gap:6px 14px}.site-nav nav a{font-size:13px}.site-nav nav a.nav-cta{padding:6px 12px}}
+
 .wrap{
   max-width:1050px;
   margin:auto;
-  padding:35px 22px 15px;
+  padding:35px 22px 40px;
 }
 
-h1,h2,h3,.brand{
-  font-family:"Space Grotesk",sans-serif;
-}
+h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
 
 /* BRAND */
 
@@ -47,9 +64,7 @@ h1,h2,h3,.brand{
   line-height:1.1;
 }
 
-.brand span{
-  color:var(--blue);
-}
+.brand span{ color:var(--blue); }
 
 .tagline{
   font-size:11px;
@@ -93,9 +108,7 @@ h1,h2,h3,.brand{
   font-size:14px;
 }
 
-.back:hover{
-  text-decoration:underline;
-}
+.back:hover{ text-decoration:underline; }
 
 /* INTRODUCTION */
 
@@ -175,13 +188,9 @@ h1,h2,h3,.brand{
   margin:0 0 13px;
 }
 
-.intro-panel p:last-child{
-  margin-bottom:0;
-}
+.intro-panel p:last-child{ margin-bottom:0; }
 
-.intro-panel strong{
-  color:var(--ink);
-}
+.intro-panel strong{ color:var(--ink); }
 
 /* SECTIONS */
 
@@ -255,13 +264,9 @@ h2.section-title{
   margin:0 0 10px;
 }
 
-.project h3{
-  font-size:20px;
-}
+.project h3{ font-size:20px; }
 
-.project p{
-  flex:1;
-}
+.project p{ flex:1; }
 
 .project-link{
   display:inline-flex;
@@ -309,10 +314,10 @@ h2.section-title{
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:16px;
-  font-weight:700;
   flex:none;
 }
+
+.check svg{ width:15px; height:15px; }
 
 .benefit strong{
   display:block;
@@ -367,11 +372,9 @@ h2.section-title{
   white-space:nowrap;
 }
 
-.btn:hover{
-  background:#2146DC;
-}
+.btn:hover{ background:#2146DC; }
 
-/* FOOTER — MATCHES GET A QUOTE */
+/* FOOTER */
 
 .footer{
   margin-top:50px;
@@ -384,8 +387,12 @@ h2.section-title{
   gap:20px;
 }
 
-.footer .brand{
-  font-size:42px;
+.footer .brand{ font-size:42px; }
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 18px;
 }
 
 .footer a{
@@ -395,9 +402,7 @@ h2.section-title{
   font-weight:600;
 }
 
-.footer a:hover{
-  text-decoration:underline;
-}
+.footer a:hover{ text-decoration:underline; }
 
 .footer p{
   width:100%;
@@ -409,133 +414,91 @@ h2.section-title{
 /* TABLET */
 
 @media(max-width:800px){
-
   .intro{
     grid-template-columns:210px minmax(0,1fr);
     gap:18px;
   }
-
   .cards{
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
-
 }
 
 /* MOBILE */
 
 @media(max-width:560px){
-
-  .wrap{
-    padding:25px 18px 15px;
-  }
-
-  .header h1{
-    font-size:32px;
-  }
-
-  .header{
-    padding-bottom:23px;
-  }
-
+  .wrap{ padding:25px 18px 30px; }
+  .header h1{ font-size:32px; }
+  .header{ padding-bottom:23px; }
   .intro{
     grid-template-columns:1fr;
     gap:15px;
     margin-top:23px;
   }
-
   .photo{
     max-width:270px;
     width:100%;
     margin:auto;
   }
-
-  .intro-panel{
-    padding:20px;
-  }
-
-  .intro-panel h2{
-    font-size:23px;
-  }
-
+  .intro-panel{ padding:20px; }
+  .intro-panel h2{ font-size:23px; }
   h2.section-title{
     font-size:25px;
     margin:30px 0 15px;
   }
-
   .cards{
     grid-template-columns:1fr;
     gap:12px;
   }
-
-  .card{
-    padding:20px;
-  }
-
+  .card{ padding:20px; }
   .benefits{
     grid-template-columns:1fr;
     gap:11px;
   }
-
-  .benefit{
-    padding:17px;
-  }
-
+  .benefit{ padding:17px; }
   .cta{
     flex-direction:column;
     align-items:flex-start;
     margin-top:30px;
     padding:23px;
   }
-
-  .cta h2{
-    font-size:24px;
-  }
-
-  .btn{
-    width:100%;
-  }
-
+  .cta h2{ font-size:24px; }
+  .btn{ width:100%; }
   .footer{
     margin-top:35px;
     padding-top:20px;
     gap:16px;
   }
-
-  .footer .brand{
-    font-size:36px;
-  }
-
-  .footer a{
-    font-size:13px;
-  }
-
+  .footer .brand{ font-size:36px; }
+  .footer a{ font-size:13px; }
 }
-
-/* PREVENT UNNECESSARY BOTTOM SPACE */
-
-body{
-  min-height:0;
-}
-
-.wrap::after{
-  content:none;
-}
-
 </style>
+</head>
+
+<body>
+
+<header class="site-nav">
+  <div class="in">
+    <a class="logo" href="/">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="25" fill="#2F5BFF"/><path d="M20 36 L35 70 L50 46 L65 70 L84 25" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Web<b>Rite</b></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/meet-your-builder" aria-current="page">Meet Your Builder</a>
+      <a href="/faqs">FAQs</a>
+      <a class="nav-cta" href="/get-a-quote">Get a Quote</a>
+    </nav>
+  </div>
+</header>
 
 <div class="wrap">
 
   <!-- HEADER -->
 
-  <header class="header">
+  <section class="header">
 
-    <div class="brand">
-      Web<span>Rite</span>
-    </div>
-
-    <div class="tagline">
-      WEBSITES THAT WORK
-    </div>
+    <div class="brand">Web<span>Rite</span></div>
+    <div class="tagline">WEBSITES THAT WORK</div>
 
     <h1>Meet Your Website Builder</h1>
 
@@ -549,27 +512,20 @@ body{
       generate leads, and help business owners operate more efficiently.
     </p>
 
-    <a class="back"
-       href="https://www.webrite.net"
-       target="_top">
-      ← Back to Homepage
-    </a>
+    <a class="back" href="/">&larr; Back to Homepage</a>
 
-  </header>
+  </section>
 
   <!-- INTRODUCTION -->
 
   <section class="intro">
 
     <div class="photo">
-
       <div class="photo-frame" id="photoFrame"></div>
-
       <div class="photo-caption">
         <strong>Trey</strong>
         <span>Founder &amp; Website Builder</span>
       </div>
-
     </div>
 
     <div class="intro-panel">
@@ -612,64 +568,47 @@ body{
 
   <!-- WHAT I BRING -->
 
-  <h2 class="section-title">
-    What I Bring to Your Website
-  </h2>
+  <h2 class="section-title">What I Bring to Your Website</h2>
 
   <div class="cards">
 
     <article class="card">
-
       <div class="card-number">01</div>
-
       <h3>Business Experience</h3>
-
       <p>
         I've handled recruiting, scheduling, marketing,
         and customer inquiries.
-
         Your website is built around how customers
         actually find and interact with your business.
       </p>
-
     </article>
 
     <article class="card">
-
       <div class="card-number">02</div>
-
       <h3>Customer Psychology</h3>
-
       <p>
         My psychology background helps me design websites
         with clear messaging, straightforward navigation,
         and calls to action that guide visitors toward
         becoming customers.
       </p>
-
     </article>
 
     <article class="card">
-
       <div class="card-number">03</div>
-
       <h3>Business Automation</h3>
-
       <p>
         From instant quote calculators and booking forms
         to automated notifications and CRM integrations,
         I build practical tools that save business owners time.
       </p>
-
     </article>
 
   </div>
 
   <!-- PORTFOLIO -->
 
-  <h2 class="section-title">
-    Businesses I've Built For
-  </h2>
+  <h2 class="section-title">Businesses I've Built For</h2>
 
   <p class="section-note">
     Real businesses, real websites, and practical solutions
@@ -680,57 +619,44 @@ body{
 
   <!-- BENEFITS -->
 
-  <h2 class="section-title">
-    What Working With Me Looks Like
-  </h2>
+  <h2 class="section-title">What Working With Me Looks Like</h2>
 
-  <div class="benefits">
+  <div class="benefits" id="benefits">
 
     <div class="benefit">
-      <div class="check">✓</div>
+      <div class="check"></div>
       <div>
         <strong>Direct Communication</strong>
-        <p>
-          The person you speak with is the person
-          building your website.
-        </p>
+        <p>The person you speak with is the person building your website.</p>
       </div>
     </div>
 
     <div class="benefit">
-      <div class="check">✓</div>
+      <div class="check"></div>
       <div>
         <strong>Plain-English Explanations</strong>
-        <p>
-          I'll explain your options without overwhelming
-          you with technical jargon.
-        </p>
+        <p>I'll explain your options without overwhelming you with technical jargon.</p>
       </div>
     </div>
 
     <div class="benefit">
-      <div class="check">✓</div>
+      <div class="check"></div>
       <div>
         <strong>You Own Your Domain</strong>
-        <p>
-          Your business maintains ownership of its domain name.
-        </p>
+        <p>Your business maintains ownership of its domain name.</p>
       </div>
     </div>
 
     <div class="benefit">
-      <div class="check">✓</div>
+      <div class="check"></div>
       <div>
         <strong>Transparent Pricing</strong>
-        <p>
-          Clear website setup fees with optional
-          monthly maintenance.
-        </p>
+        <p>Clear website setup fees with optional monthly maintenance.</p>
       </div>
     </div>
 
     <div class="benefit">
-      <div class="check">✓</div>
+      <div class="check"></div>
       <div>
         <strong>Local Business Focus</strong>
         <p>
@@ -742,13 +668,10 @@ body{
     </div>
 
     <div class="benefit">
-      <div class="check">✓</div>
+      <div class="check"></div>
       <div>
         <strong>Ongoing Support</strong>
-        <p>
-          Optional maintenance and automation support
-          as your business grows.
-        </p>
+        <p>Optional maintenance and automation support as your business grows.</p>
       </div>
     </div>
 
@@ -757,25 +680,15 @@ body{
   <!-- CTA -->
 
   <section class="cta">
-
     <div>
-
       <h2>Let's Build Your Website</h2>
-
       <p>
         Tell me about your business, choose your preferred
         features, and request a personalized quote.
         I'll follow up within one business day.
       </p>
-
     </div>
-
-    <a class="btn"
-       href="https://www.webrite.net/get-a-quote"
-       target="_top">
-      Get My Quote →
-    </a>
-
+    <a class="btn" href="/get-a-quote">Get My Quote &rarr;</a>
   </section>
 
   <!-- FOOTER -->
@@ -783,42 +696,21 @@ body{
   <footer class="footer">
 
     <div>
-
-      <div class="brand">
-        Web<span>Rite</span>
-      </div>
-
-      <div class="tagline">
-        WEBSITES THAT WORK
-      </div>
-
+      <div class="brand">Web<span>Rite</span></div>
+      <div class="tagline">WEBSITES THAT WORK</div>
     </div>
 
-    <div>
-
-      <a href="https://www.webrite.net"
-         target="_top">
-        Home
-      </a>
-
-      &nbsp; · &nbsp;
-
-      <a href="https://www.webrite.net/get-a-quote"
-         target="_top">
-        Get a Quote
-      </a>
-
-      &nbsp; · &nbsp;
-
-      <a href="https://www.webrite.net/privacy"
-         target="_top">
-        Privacy
-      </a>
-
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/meet-your-builder">Meet Your Builder</a>
+      <a href="/get-a-quote">Get a Quote</a>
+      <a href="/faqs">FAQs</a>
+      <a href="/terms-of-service">Terms of Service</a>
+      <a href="/privacy">Privacy</a>
     </div>
 
     <p>
-      © 2026 WebRite · Websites That Work.
+      &copy; 2026 WebRite &middot; Websites That Work.
       Serving Riverside, the Inland Empire, Los Angeles,
       Orange County, San Diego &amp; beyond.
     </p>
@@ -828,108 +720,70 @@ body{
 </div>
 
 <script>
+/* CHECK ICONS */
+
+const CHECK_SVG =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+
+document.querySelectorAll(".check").forEach(el => { el.innerHTML = CHECK_SVG; });
 
 /* PROFILE PHOTO */
 
-const PHOTO_ID =
-  "1HncjnvCaNSV1ROMVOnjgIo1HqxxEpS4D";
+const PHOTO_ID = "1HncjnvCaNSV1ROMVOnjgIo1HqxxEpS4D";
 
-const photoFrame =
-  document.getElementById("photoFrame");
-
+const photoFrame = document.getElementById("photoFrame");
 const profileImage = new Image();
 
-profileImage.alt =
-  "Trey, founder and website builder at WebRite";
-
-profileImage.src =
-  "https://lh3.googleusercontent.com/d/" +
-  PHOTO_ID +
-  "=w900";
+profileImage.alt = "Trey, founder and website builder at WebRite";
+profileImage.src = "https://lh3.googleusercontent.com/d/" + PHOTO_ID + "=w900";
 
 profileImage.onerror = function(){
-
-  photoFrame.innerHTML =
-    '<span class="photo-fallback">T</span>';
-
+  photoFrame.innerHTML = '<span class="photo-fallback">T</span>';
 };
 
 photoFrame.appendChild(profileImage);
 
-
 /* PORTFOLIO */
 
 const PROJECTS = [
-
   {
     name:"In Home Infusion",
-    type:"Mobile IV Therapy · WordPress + Automation",
+    type:"Mobile IV Therapy \u00B7 WordPress + Automation",
     url:"https://inhomeinfusion.com",
     description:
       "The mobile IV therapy company I founded. Patients across 30+ markets can explore treatments, review pricing, and request appointments."
   },
-
   {
     name:"Pour Live",
-    type:"Private Bartending · Google Sites",
+    type:"Private Bartending \u00B7 Google Sites",
     url:"https://www.pourlive.com",
     description:
       "My private event bartending business, featuring a professional website, automated estimates, and booking inquiries."
   },
-
   {
     name:"Legal Console",
-    type:"Legal Staffing · WordPress",
+    type:"Legal Staffing \u00B7 WordPress",
     url:"https://legalconsole.net",
     description:
       "My legal recruiting venture, designed to connect legal professionals with law firms through a professional digital presence."
   }
-
 ];
 
 function escapeHTML(value){
-
-  return String(value).replace(
-    /[&<>"']/g,
-    character => ({
-      "&":"&amp;",
-      "<":"&lt;",
-      ">":"&gt;",
-      '"':"&quot;",
-      "'":"&#39;"
-    }[character])
-  );
-
+  return String(value).replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+  }[c]));
 }
 
-document.getElementById("projects").innerHTML =
-  PROJECTS.map(project => `
-
-    <article class="card project">
-
-      <div class="project-type">
-        ${escapeHTML(project.type)}
-      </div>
-
-      <h3>
-        ${escapeHTML(project.name)}
-      </h3>
-
-      <p>
-        ${escapeHTML(project.description)}
-      </p>
-
-      <a
-        class="project-link"
-        href="${escapeHTML(project.url)}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Visit Website →
-      </a>
-
-    </article>
-
-  `).join("");
-
+document.getElementById("projects").innerHTML = PROJECTS.map(project => `
+  <article class="card project">
+    <div class="project-type">${escapeHTML(project.type)}</div>
+    <h3>${escapeHTML(project.name)}</h3>
+    <p>${escapeHTML(project.description)}</p>
+    <a class="project-link" href="${escapeHTML(project.url)}" target="_blank" rel="noopener noreferrer">Visit Website \u2192</a>
+  </article>
+`).join("");
 </script>
+
+</body>
+</html>
