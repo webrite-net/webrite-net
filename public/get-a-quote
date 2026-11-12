@@ -1,5 +1,14 @@
-<!-- WEBRITE GET A QUOTE PAGE | Google Sites Embed -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get a Quote | WebRite</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232F5BFF'/><path d='M20 36 L35 70 L50 46 L65 70 L84 25' fill='none' stroke='white' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta name="description" content="Request a website quote from WebRite. Choose a package, pick your features, and get a personalized quote for your small business website.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -11,50 +20,84 @@
   --muted:#5A5F6E;
   --line:#D9DCE4;
 }
-*{box-sizing:border-box}
+
+*{ box-sizing:border-box; }
+
 html,body{
   margin:0;
   padding:0;
-  height:auto;
   overflow-x:hidden;
   background:var(--bg);
   color:var(--ink);
   font-family:Inter,Arial,sans-serif;
   line-height:1.5;
 }
+
+/* SITE MENU */
+
+.site-nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.site-nav .in{max-width:1100px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}
+.site-nav .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font:700 22px "Space Grotesk",Inter,sans-serif;letter-spacing:-1px}
+.site-nav .logo b{color:var(--blue);font-weight:700}
+.site-nav nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.site-nav nav a{color:var(--ink);text-decoration:none;font:600 14px Inter,sans-serif}
+.site-nav nav a:hover,.site-nav nav a[aria-current="page"]{color:var(--blue)}
+.site-nav nav a.nav-cta{background:var(--blue);color:#fff;padding:8px 16px;border-radius:50px}
+.site-nav nav a.nav-cta:hover{background:#2146DC;color:#fff}
+@media(max-width:560px){.site-nav .in{padding:10px 18px}.site-nav nav{gap:6px 14px}.site-nav nav a{font-size:13px}.site-nav nav a.nav-cta{padding:6px 12px}}
+
 .wrap{
   max-width:1050px;
-  margin:auto;
-  padding:35px 22px 90px;
+  margin:0 auto;
+  padding:35px 22px 40px;
 }
-h1,h2,h3,.brand{
-  font-family:"Space Grotesk",sans-serif;
-}
+
+h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
+
+/* BRAND */
+
 .brand{
   font-size:42px;
   font-weight:700;
   letter-spacing:-2px;
+  line-height:1.1;
 }
-.brand span{color:var(--blue)}
+
+.brand span{ color:var(--blue); }
+
 .tagline{
   font-size:11px;
   font-weight:700;
   letter-spacing:3px;
   color:var(--blue);
 }
+
+/* HEADER */
+
 .header{
   padding-bottom:30px;
   border-bottom:1px solid var(--line);
 }
+
 .header h1{
   font-size:clamp(32px,5vw,44px);
   margin:25px 0 12px;
   letter-spacing:-1px;
+  line-height:1.1;
 }
+
 .header p{
   color:var(--muted);
-  max-width:680px;
+  max-width:720px;
+  margin:0 0 12px;
 }
+
+.header .lead{
+  font-size:17px;
+  color:var(--ink);
+  font-weight:500;
+}
+
 .back{
   display:inline-block;
   margin-top:16px;
@@ -63,10 +106,223 @@ h1,h2,h3,.brand{
   font-weight:700;
   font-size:14px;
 }
-h2{
+
+.back:hover{ text-decoration:underline; }
+
+/* INTRO */
+
+.intro{
+  margin-top:30px;
+  padding:26px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+
+.intro h2{
+  font-size:25px;
+  margin:0 0 10px;
+  letter-spacing:-.5px;
+}
+
+.intro p{
+  color:var(--muted);
+  font-size:14px;
+  margin:0;
+  max-width:850px;
+}
+
+/* SECTION HEADINGS */
+
+.section-title{
   font-size:28px;
   margin:35px 0 17px;
+  letter-spacing:-.6px;
 }
+
+.section-note{
+  color:var(--muted);
+  font-size:14px;
+  margin:-7px 0 17px;
+}
+
+/* FAQ ACCORDION */
+
+.faq-group{
+  display:grid;
+  gap:12px;
+}
+
+.faq{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:15px;
+}
+
+.faq[open]{ border-color:#A9B8FF; }
+
+.faq summary{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:19px 22px;
+  cursor:pointer;
+  list-style:none;
+  font-size:15px;
+  font-weight:700;
+  color:var(--ink);
+}
+
+.faq summary::-webkit-details-marker{ display:none; }
+
+.faq summary:focus-visible{
+  outline:3px solid var(--blue);
+  outline-offset:2px;
+  border-radius:15px;
+}
+
+.faq summary::after{
+  content:"+";
+  flex:none;
+  width:29px;
+  height:29px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:9px;
+  background:#EDF1FF;
+  color:var(--blue);
+  font-family:"Space Grotesk",sans-serif;
+  font-size:21px;
+  font-weight:700;
+}
+
+.faq[open] summary::after{
+  content:"\2212";
+  background:var(--blue);
+  color:white;
+}
+
+.faq-answer{
+  padding:0 22px 20px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.75;
+}
+
+.faq-answer p{ margin:0 0 12px; }
+.faq-answer p:last-child{ margin-bottom:0; }
+
+.faq-answer ul{
+  margin:8px 0 12px;
+  padding-left:20px;
+}
+
+.faq-answer li{ margin:7px 0; }
+
+.faq-answer strong{ color:var(--ink); }
+
+.faq-answer a{
+  color:var(--blue);
+  font-weight:700;
+  text-decoration:none;
+}
+
+.faq-answer a:hover{ text-decoration:underline; }
+
+/* PRICING */
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-top:20px;
+}
+
+.price-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:21px;
+  min-width:0;
+}
+
+.price-card h3{
+  font-size:19px;
+  margin:0 0 9px;
+}
+
+.price-card .amount{
+  color:var(--blue);
+  font-family:"Space Grotesk",sans-serif;
+  font-size:23px;
+  font-weight:700;
+  letter-spacing:-.5px;
+}
+
+.price-card .monthly{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:10px;
+}
+
+.price-card.featured{
+  border:2px solid var(--blue);
+  padding:20px;
+}
+
+.price-note{
+  color:var(--muted);
+  font-size:12px;
+  margin:13px 0 0;
+}
+
+/* CTA */
+
+.cta{
+  margin-top:38px;
+  background:var(--ink);
+  color:white;
+  border-radius:18px;
+  padding:28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+}
+
+.cta h2{
+  font-size:27px;
+  margin:0 0 8px;
+}
+
+.cta p{
+  color:#C9CCD6;
+  font-size:14px;
+  margin:0;
+  max-width:560px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 23px;
+  background:var(--blue);
+  color:white;
+  border:0;
+  border-radius:999px;
+  font:700 15px Inter,sans-serif;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.btn:hover{ background:#2146DC; }
+
+/* QUOTE PAGE */
+
 .plans{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -77,32 +333,41 @@ h2{
   border:1px solid var(--line);
   border-radius:18px;
   padding:20px;
+  display:flex;
+  flex-direction:column;
 }
-.plan.featured{border:2px solid var(--blue)}
-.plan h3{margin:0 0 7px;font-size:19px}
-.price{
+.plan.featured{ border:2px solid var(--blue); }
+.plan h3{ margin:0 0 7px; font-size:19px; }
+.plan .price{
   color:var(--blue);
   font-size:27px;
   font-weight:700;
   font-family:"Space Grotesk",sans-serif;
+  letter-spacing:-.5px;
 }
-.price small{
+.plan .price small{
   color:var(--muted);
   font-size:13px;
   font-family:Inter,sans-serif;
   font-weight:400;
+  letter-spacing:0;
 }
-.monthly{font-size:13px;font-weight:600}
-.plan ul{
-  padding-left:18px;
-  font-size:13px;
+.plan .monthly-line{ font-size:13px; font-weight:600; }
+.plan ul{ padding-left:18px; font-size:13px; margin:12px 0; flex:1; }
+.plan li{ margin:7px 0; }
+.pick{
+  align-self:flex-start;
+  border:2px solid var(--blue);
+  background:transparent;
+  color:var(--blue);
+  border-radius:30px;
+  padding:8px 16px;
+  font:700 13px Inter,sans-serif;
+  cursor:pointer;
 }
-.plan li{margin:7px 0}
-.note{
-  font-size:13px;
-  color:var(--muted);
-  margin:16px 0;
-}
+.pick:hover,.pick[aria-pressed="true"]{ background:var(--blue); color:#fff; }
+.note{ font-size:13px; color:var(--muted); margin:16px 0; }
+
 .book{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -118,15 +383,8 @@ h2{
   gap:15px;
   min-width:0;
 }
-.panel h3{
-  margin:0;
-  font-size:19px;
-}
-.side{
-  display:grid;
-  gap:20px;
-  min-width:0;
-}
+.panel h3{ margin:0; font-size:19px; }
+.side{ display:grid; gap:20px; min-width:0; }
 .row{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -138,11 +396,7 @@ label{
   font-weight:600;
   margin-bottom:6px;
 }
-input[type=text],
-input[type=tel],
-input[type=email],
-select,
-textarea{
+input[type=text],input[type=tel],input[type=email],select,textarea{
   width:100%;
   min-width:0;
   min-height:45px;
@@ -152,12 +406,13 @@ textarea{
   background:#FAFBFC;
   color:var(--ink);
   font:inherit;
-  font-size:14px;
+  font-size:16px;
 }
-textarea{
-  min-height:95px;
-  resize:vertical;
+input:focus-visible,select:focus-visible,textarea:focus-visible,.pick:focus-visible,.submit:focus-visible{
+  outline:3px solid var(--blue);
+  outline-offset:2px;
 }
+textarea{ min-height:95px; resize:vertical; }
 .check{
   display:flex;
   align-items:flex-start;
@@ -169,30 +424,25 @@ textarea{
 .check input{
   width:19px;
   height:19px;
+  margin-top:1px;
   accent-color:var(--blue);
   flex:none;
 }
+.check a{ color:var(--blue); font-weight:600; }
 .total{
   background:var(--ink);
   color:white;
   border-radius:18px;
   padding:25px;
 }
-.total h3{
-  margin:0 0 12px;
-  font-size:17px;
-}
+.total h3{ margin:0 0 12px; font-size:17px; }
 .amt{
   font-family:"Space Grotesk",sans-serif;
   font-size:40px;
   font-weight:700;
   line-height:1.1;
 }
-.breakdown{
-  list-style:none;
-  padding:0;
-  margin:15px 0 0;
-}
+.breakdown{ list-style:none; padding:0; margin:15px 0 0; }
 .breakdown li{
   display:flex;
   justify-content:space-between;
@@ -201,10 +451,8 @@ textarea{
   border-bottom:1px solid #33343C;
   font-size:13px;
 }
-.breakdown li span:last-child{
-  text-align:right;
-}
-.btn{
+.breakdown li span:last-child{ text-align:right; }
+.submit{
   width:100%;
   border:0;
   border-radius:50px;
@@ -214,26 +462,23 @@ textarea{
   font:700 16px Inter,sans-serif;
   cursor:pointer;
 }
-.btn:disabled{opacity:.6}
-.small{
-  font-size:12px;
-  color:var(--muted);
-  margin:0;
+.submit:hover{ background:#2146DC; }
+.submit:disabled{ opacity:.6; cursor:wait; }
+.small{ font-size:12px; color:var(--muted); margin:0; }
+.msg{ padding:15px; border-radius:12px; font-size:14px; font-weight:600; }
+.msg.ok{ background:#E7F6EC; border:1px solid #6CC08A; }
+.msg.err{ background:#FDECEA; border:1px solid #E58A80; }
+
+@media(max-width:700px){ .book{ grid-template-columns:1fr; } }
+@media(max-width:560px){
+  .row{ grid-template-columns:1fr; }
+  .plans{ grid-template-columns:1fr; }
+  .panel{ padding:19px; }
+  .amt{ font-size:35px; }
 }
-.msg{
-  padding:15px;
-  border-radius:12px;
-  font-size:14px;
-  font-weight:600;
-}
-.msg.ok{
-  background:#E7F6EC;
-  border:1px solid #6CC08A;
-}
-.msg.err{
-  background:#FDECEA;
-  border:1px solid #E58A80;
-}
+
+/* FOOTER */
+
 .footer{
   margin-top:50px;
   padding-top:25px;
@@ -241,233 +486,268 @@ textarea{
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
+  align-items:flex-start;
   gap:20px;
 }
+
+.footer .brand{ font-size:42px; }
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 18px;
+}
+
 .footer a{
   color:var(--blue);
   text-decoration:none;
   font-size:14px;
   font-weight:600;
 }
+
+.footer a:hover{ text-decoration:underline; }
+
 .footer p{
   width:100%;
   font-size:12px;
   color:var(--muted);
+  margin:0;
 }
-@media(max-width:700px){
-  .book{grid-template-columns:1fr}
+
+/* TABLET */
+
+@media(max-width:900px){
+  .pricing{ grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
+
+/* MOBILE */
+
 @media(max-width:560px){
-  .wrap{padding:25px 18px 75px}
-  .row{grid-template-columns:1fr}
-  .plans{grid-template-columns:1fr}
-  .panel{padding:19px}
-  .header h1{font-size:32px}
-  .amt{font-size:35px}
+  .wrap{ padding:25px 18px 30px; }
+  .header h1{ font-size:32px; }
+  .header{ padding-bottom:23px; }
+  .intro{
+    margin-top:23px;
+    padding:20px;
+  }
+  .intro h2{ font-size:23px; }
+  .section-title{
+    font-size:25px;
+    margin:30px 0 15px;
+  }
+  .faq-group{ gap:10px; }
+  .faq summary{
+    padding:17px;
+    font-size:14px;
+  }
+  .faq-answer{
+    padding:0 17px 18px;
+    font-size:13px;
+  }
+  .pricing{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .price-card{ padding:19px; }
+  .price-card.featured{ padding:18px; }
+  .cta{
+    flex-direction:column;
+    align-items:flex-start;
+    margin-top:30px;
+    padding:23px;
+  }
+  .cta h2{ font-size:24px; }
+  .btn{ width:100%; }
+  .footer{
+    margin-top:35px;
+    padding-top:20px;
+    gap:16px;
+  }
+  .footer .brand{ font-size:36px; }
+  .footer a{ font-size:13px; }
 }
 </style>
+</head>
+
+<body>
+
+<header class="site-nav">
+  <div class="in">
+    <a class="logo" href="/">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="25" fill="#2F5BFF"/><path d="M20 36 L35 70 L50 46 L65 70 L84 25" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Web<b>Rite</b></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/meet-your-builder">Meet Your Builder</a>
+      <a href="/faqs">FAQs</a>
+      <a class="nav-cta" href="/get-a-quote" aria-current="page">Get a Quote</a>
+    </nav>
+  </div>
+</header>
 
 <div class="wrap">
 
-<header class="header">
-  <div class="brand">Web<span>Rite</span></div>
-  <div class="tagline">WEBSITES THAT WORK</div>
+  <!-- HEADER -->
 
-  <h1>Get Your Website Quote</h1>
+  <section class="header">
 
-  <p>
-    Tell us about your business and the website you need.
-    Choose a package, select your preferred features,
-    and submit your request.
-    We'll review your project and follow up with a personalized quote.
-  </p>
+    <div class="brand">Web<span>Rite</span></div>
+    <div class="tagline">WEBSITES THAT WORK</div>
 
-  <a class="back"
-     href="https://www.webrite.net"
-     target="_top">
-     ← Back to Homepage
-  </a>
-</header>
+    <h1>Get Your Website Quote</h1>
 
-<h2>Choose Your Website Package</h2>
+    <p>
+      Tell us about your business and the website you need.
+      Choose a package, select your preferred features,
+      and submit your request.
+      We'll review your project and follow up with a personalized quote.
+    </p>
 
-<div class="plans" id="plans"></div>
+    <a class="back" href="/">&larr; Back to Homepage</a>
 
-<p class="note" id="policy"></p>
+  </section>
 
-<h2>Tell Us About Your Project</h2>
+  <h2 class="section-title">Choose Your Website Package</h2>
 
-<form id="bookForm" class="book" novalidate>
+  <div class="plans" id="plans"></div>
 
-  <div class="panel">
+  <p class="note" id="policy"></p>
 
-    <h3>Your Website</h3>
+  <h2 class="section-title" id="project">Tell Us About Your Project</h2>
 
-    <div>
-      <label for="pkg">Website Package *</label>
-      <select id="pkg" required></select>
-    </div>
-
-    <div class="row">
-
-      <div>
-        <label for="when">When Do You Want to Launch? *</label>
-        <select id="when" required></select>
-      </div>
-
-      <div>
-        <label for="site">Current Website (If Any)</label>
-        <input id="site"
-               type="text"
-               placeholder="yourbusiness.com">
-      </div>
-
-    </div>
-
-    <div>
-      <label for="what">What Does Your Business Do? *</label>
-      <input id="what"
-             type="text"
-             placeholder="Describe your business"
-             required>
-    </div>
-
-    <div id="addons"></div>
-
-  </div>
-
-  <div class="side">
-
-    <div class="total" aria-live="polite">
-      <h3>Your Selected Package</h3>
-      <div class="amt" id="amt">$0</div>
-      <ul class="breakdown" id="breakdown"></ul>
-    </div>
+  <form id="bookForm" class="book" novalidate>
 
     <div class="panel">
 
-      <h3>Your Contact Information</h3>
+      <h3>Your Website</h3>
 
-      <div class="row">
-
-        <div>
-          <label for="name">Full Name *</label>
-          <input id="name"
-                 type="text"
-                 autocomplete="name"
-                 required>
-        </div>
-
-        <div>
-          <label for="biz">Business Name *</label>
-          <input id="biz"
-                 type="text"
-                 autocomplete="organization"
-                 required>
-        </div>
-
+      <div>
+        <label for="pkg">Website Package *</label>
+        <select id="pkg" required></select>
       </div>
 
       <div class="row">
-
         <div>
-          <label for="phone">Phone Number *</label>
-          <input id="phone"
-                 type="tel"
-                 autocomplete="tel"
-                 required>
+          <label for="when">When Do You Want to Launch? *</label>
+          <select id="when" required></select>
         </div>
-
         <div>
-          <label for="email">Email Address *</label>
-          <input id="email"
-                 type="email"
-                 autocomplete="email"
-                 required>
+          <label for="site">Current Website (If Any)</label>
+          <input id="site" type="text" placeholder="yourbusiness.com">
         </div>
-
       </div>
 
       <div>
-        <label for="notes">
-          Anything Else We Should Know?
-        </label>
-
-        <textarea id="notes"
-                  placeholder="Preferred colors, websites you like, special features, etc."></textarea>
+        <label for="what">What Does Your Business Do? *</label>
+        <input id="what" type="text" placeholder="Describe your business" required>
       </div>
 
-      <label class="check">
-        <input id="consent"
-               type="checkbox"
-               required>
-        <span>
-          WebRite may contact me by phone, text,
-          and email regarding my website request.
-        </span>
-      </label>
-
-      <button class="btn"
-              id="submitBtn"
-              type="submit">
-        Get My Quote →
-      </button>
-
-      <div id="formMsg" role="status"></div>
-
-      <p class="small">
-        We'll review your request and follow up
-        within one business day.
-      </p>
+      <div id="addons"></div>
 
     </div>
 
-  </div>
+    <div class="side">
 
-</form>
+      <div class="total" aria-live="polite">
+        <h3>Your Selected Package</h3>
+        <div class="amt" id="amt">$0</div>
+        <ul class="breakdown" id="breakdown"></ul>
+      </div>
 
-<footer class="footer">
+      <div class="panel">
 
-  <div>
-    <div class="brand">Web<span>Rite</span></div>
-    <div class="tagline">WEBSITES THAT WORK</div>
-  </div>
+        <h3>Your Contact Information</h3>
 
-  <div>
-    <a href="https://www.webrite.net"
-       target="_top">Home</a>
-    &nbsp; · &nbsp;
-    <a href="https://www.webrite.net/meet-the-builder"
-       target="_top">Meet the Builder</a>
-    &nbsp; · &nbsp;
-    <a href="https://www.webrite.net/privacy"
-       target="_top">Privacy</a>
-  </div>
+        <div class="row">
+          <div>
+            <label for="name">Full Name *</label>
+            <input id="name" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="biz">Business Name *</label>
+            <input id="biz" type="text" autocomplete="organization" required>
+          </div>
+        </div>
 
-  <p>
-    © 2026 WebRite · Websites That Work.
-    Serving Riverside, the Inland Empire, Los Angeles,
-    Orange County, San Diego & beyond.
-  </p>
+        <div class="row">
+          <div>
+            <label for="phone">Phone Number *</label>
+            <input id="phone" type="tel" autocomplete="tel" required>
+          </div>
+          <div>
+            <label for="email">Email Address *</label>
+            <input id="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
 
-</footer>
+        <div>
+          <label for="notes">Anything Else We Should Know?</label>
+          <textarea id="notes" placeholder="Preferred colors, websites you like, special features, etc."></textarea>
+        </div>
+
+        <label class="check">
+          <input id="consent" type="checkbox" required>
+          <span>
+            WebRite may contact me by phone, text, and email regarding my
+            website request. See our <a href="/privacy">Privacy Policy</a>.
+          </span>
+        </label>
+
+        <button class="submit" id="submitBtn" type="submit">Get My Quote &rarr;</button>
+
+        <div id="formMsg" role="status"></div>
+
+        <p class="small">We'll review your request and follow up within one business day.</p>
+
+      </div>
+
+    </div>
+
+  </form>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div>
+      <div class="brand">Web<span>Rite</span></div>
+      <div class="tagline">WEBSITES THAT WORK</div>
+    </div>
+
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/meet-your-builder">Meet Your Builder</a>
+      <a href="/get-a-quote">Get a Quote</a>
+      <a href="/faqs">FAQs</a>
+      <a href="/terms-of-service">Terms of Service</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+
+    <p>
+      &copy; 2026 WebRite &middot; Websites That Work.
+      Serving Riverside, the Inland Empire, Los Angeles,
+      Orange County, San Diego &amp; beyond.
+    </p>
+
+  </footer>
 
 </div>
 
 <script>
-/*
-  IMPORTANT:
-  Replace null with your actual Google Forms mapping
-  generated by exportFormMap().
-*/
+/* =====================================================================
+   PASTE YOUR GOOGLE FORM CONNECTION HERE
+   Replace null with the line from exportFormMap(), so it reads:
+   const FORM_MAP = {"action":"https://docs.google.com/forms/...","items":{...}};
+   ===================================================================== */
 const FORM_MAP = null;
 
 const CONFIG = {
   packages:[
     {
       id:"Solo",
-      setup:"$199–$299",
-      monthly:"Optional $0–$35/mo",
+      setup:"$199\u2013$299",
+      monthly:"Optional $0\u2013$35/mo",
       featured:false,
       perks:[
         "Essential one-page website",
@@ -480,8 +760,8 @@ const CONFIG = {
     },
     {
       id:"Starter",
-      setup:"$399–$599",
-      monthly:"Optional $25–$75/mo",
+      setup:"$399\u2013$599",
+      monthly:"Optional $25\u2013$75/mo",
       featured:true,
       perks:[
         "Premium customized website",
@@ -494,8 +774,8 @@ const CONFIG = {
     },
     {
       id:"Growth",
-      setup:"$599–$899",
-      monthly:"Optional $75–$129/mo",
+      setup:"$599\u2013$899",
+      monthly:"Optional $75\u2013$129/mo",
       featured:false,
       perks:[
         "Everything in Starter",
@@ -507,8 +787,8 @@ const CONFIG = {
     },
     {
       id:"Automation",
-      setup:"$699–$1,200+",
-      monthly:"Optional $99–$199+/mo",
+      setup:"$699\u2013$1,200+",
+      monthly:"Optional $99\u2013$199+/mo",
       featured:false,
       perks:[
         "Custom business website",
@@ -548,274 +828,192 @@ const CONFIG = {
     "Professional email setup is optional beginning with Starter."
 };
 
-const $=id=>document.getElementById(id);
+const $ = id => document.getElementById(id);
 
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({
-  "&":"&amp;",
-  "<":"&lt;",
-  ">":"&gt;",
-  '"':"&quot;",
-  "'":"&#39;"
+const esc = s => String(s).replace(/[&<>"']/g, c => ({
+  "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
 }[c]));
 
-const items=(FORM_MAP&&FORM_MAP.items)||{};
+const items = (FORM_MAP && FORM_MAP.items) || {};
 
-const choicesFor=(title,fallback)=>{
-  const item=items[title];
-  return item&&Array.isArray(item.choices)&&item.choices.length
-    ?item.choices
-    :fallback;
+const choicesFor = (title, fallback) => {
+  const item = items[title];
+  return item && Array.isArray(item.choices) && item.choices.length ? item.choices : fallback;
 };
 
-/* RENDER PACKAGES */
-$("plans").innerHTML=CONFIG.packages.map(p=>`
-  <article class="plan ${p.featured?"featured":""}">
-    <h3>${p.id}${p.featured?" · Most Popular":""}</h3>
-    <div class="price">
-      ${p.setup}<small> setup</small>
-    </div>
-    <div class="monthly">${p.monthly}</div>
-    <ul>
-      ${p.perks.map(x=>`<li>${esc(x)}</li>`).join("")}
-    </ul>
+/* PACKAGE CARDS */
+
+$("plans").innerHTML = CONFIG.packages.map(p => `
+  <article class="plan ${p.featured ? "featured" : ""}">
+    <h3>${p.id}${p.featured ? " \u00B7 Most Popular" : ""}</h3>
+    <div class="price">${p.setup}<small> setup</small></div>
+    <div class="monthly-line">${p.monthly}</div>
+    <ul>${p.perks.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+    <button class="pick" type="button" data-plan="${p.id}" aria-pressed="false">Choose ${p.id}</button>
   </article>
 `).join("");
 
-$("policy").textContent=CONFIG.policy;
+$("policy").textContent = CONFIG.policy;
 
-/* PLAN SELECTOR */
-const planChoices=choicesFor(
+/* PACKAGE SELECTOR */
+
+const planChoices = choicesFor(
   "Plan",
-  CONFIG.packages.map(p=>
-    `${p.id} (${p.setup} setup, ${p.monthly})`
-  ).concat(["Not sure, help me choose"])
+  CONFIG.packages.map(p => `${p.id} (${p.setup} setup, ${p.monthly})`).concat(["Not sure, help me choose"])
 );
 
-$("pkg").innerHTML=planChoices.map(c=>`
-  <option value="${esc(c)}"
-    ${c.startsWith("Starter")?"selected":""}>
-    ${esc(c)}
-  </option>
-`).join("");
+$("pkg").innerHTML = planChoices.map(c =>
+  `<option value="${esc(c)}"${c.startsWith("Starter") ? " selected" : ""}>${esc(c)}</option>`
+).join("");
+
+/* Preselect a plan from the link, e.g. /get-a-quote?plan=Growth */
+const urlPlan = new URLSearchParams(location.search).get("plan");
+if (urlPlan) {
+  const match = [...$("pkg").options].find(o => o.value.toLowerCase().startsWith(urlPlan.toLowerCase()));
+  if (match) $("pkg").value = match.value;
+}
 
 /* LAUNCH SELECTOR */
-$("when").innerHTML=
-  '<option value="">Choose one</option>'+
-  choicesFor(
-    "When do you want to launch?",
-    CONFIG.launch
-  ).map(v=>`
-    <option value="${esc(v)}">${esc(v)}</option>
-  `).join("");
+
+$("when").innerHTML = '<option value="">Choose one</option>' +
+  choicesFor("When do you want to launch?", CONFIG.launch)
+    .map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join("");
 
 /* FEATURES */
-$("addons").innerHTML=
-  '<label>Features You Want</label>'+
-  choicesFor(
-    "Features you want",
-    CONFIG.features
-  ).map(f=>`
+
+$("addons").innerHTML = '<label>Features You Want</label>' +
+  choicesFor("Features you want", CONFIG.features).map(f => `
     <label class="check">
       <input type="checkbox" value="${esc(f)}">
       <span>${esc(f)}</span>
     </label>
   `).join("");
 
-/* Prevent branded email from being selected with Solo */
+/* Branded email isn't available with Solo */
 function syncFeatures(){
-  const solo=$("pkg").value.startsWith("Solo");
-
-  document.querySelectorAll(
-    '#addons input[type="checkbox"]'
-  ).forEach(cb=>{
-    if(cb.value==="Professional branded email setup"){
-      cb.disabled=solo;
-      if(solo)cb.checked=false;
-
-      const label=cb.closest("label");
-      if(label)label.style.opacity=solo?".45":"1";
+  const solo = $("pkg").value.startsWith("Solo");
+  document.querySelectorAll('#addons input[type="checkbox"]').forEach(cb => {
+    if (cb.value === "Professional branded email setup") {
+      cb.disabled = solo;
+      if (solo) cb.checked = false;
+      const label = cb.closest("label");
+      if (label) label.style.opacity = solo ? ".45" : "1";
     }
   });
 }
 
-/* PRICING SUMMARY */
+/* SUMMARY BOX */
+
 function calc(){
   syncFeatures();
 
-  const p=CONFIG.packages.find(x=>
-    $("pkg").value.startsWith(x.id)
-  );
+  const p = CONFIG.packages.find(x => $("pkg").value.startsWith(x.id));
+  const selected = [...document.querySelectorAll('#addons input[type="checkbox"]:checked')].map(cb => cb.value);
 
-  const selected=[
-    ...document.querySelectorAll(
-      '#addons input[type="checkbox"]:checked'
-    )
-  ].map(cb=>cb.value);
+  $("amt").textContent = p ? p.setup : "Custom Quote";
 
-  $("amt").textContent=p?p.setup:"Custom Quote";
+  const lines = p
+    ? [["Package", p.id], ["One-Time Setup", p.setup], ["Optional Care", p.monthly]]
+    : [["Package", "We'll recommend one"]];
 
-  const lines=p
-    ?[
-      ["Package",p.id],
-      ["One-Time Setup",p.setup],
-      ["Optional Care",p.monthly]
-    ]
-    :[
-      ["Package","We'll recommend one"]
-    ];
+  if (selected.length) lines.push(["Features Selected", String(selected.length)]);
+  if (selected.includes("Professional branded email setup")) lines.push(["Email Setup", "Quoted separately"]);
 
-  if(selected.length){
-    lines.push(["Features Selected",String(selected.length)]);
-  }
+  $("breakdown").innerHTML = lines.map(([a, b]) =>
+    `<li><span>${esc(a)}</span><span>${esc(b)}</span></li>`
+  ).join("");
 
-  if(selected.includes("Professional branded email setup")){
-    lines.push(["Email Setup","Quoted separately"]);
-  }
-
-  $("breakdown").innerHTML=lines.map(([a,b])=>`
-    <li>
-      <span>${esc(a)}</span>
-      <span>${esc(b)}</span>
-    </li>
-  `).join("");
+  document.querySelectorAll(".pick").forEach(btn => {
+    btn.setAttribute("aria-pressed", p && btn.dataset.plan === p.id ? "true" : "false");
+  });
 }
 
-document.querySelectorAll(
-  "#bookForm select,#bookForm input"
-).forEach(el=>{
-  el.addEventListener("input",calc);
-  el.addEventListener("change",calc);
+document.querySelectorAll("#bookForm select, #bookForm input").forEach(el => {
+  el.addEventListener("input", calc);
+  el.addEventListener("change", calc);
+});
+
+/* "Choose" buttons on the package cards */
+document.querySelectorAll(".pick").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const match = [...$("pkg").options].find(o => o.value.startsWith(btn.dataset.plan));
+    if (match) $("pkg").value = match.value;
+    calc();
+    $("project").scrollIntoView({ behavior:"smooth", block:"start" });
+  });
 });
 
 calc();
 
-/* GOOGLE FORMS SUBMISSION */
-function setMsg(kind,text){
-  $("formMsg").innerHTML=text
-    ?`<div class="msg ${kind}">${esc(text)}</div>`
-    :"";
+/* SUBMIT TO GOOGLE FORM */
+
+function setMsg(kind, text){
+  $("formMsg").innerHTML = text ? `<div class="msg ${kind}">${esc(text)}</div>` : "";
 }
 
-$("bookForm").addEventListener("submit",async e=>{
+$("bookForm").addEventListener("submit", async e => {
   e.preventDefault();
-  setMsg("","");
+  setMsg("", "");
 
-  if(!FORM_MAP||!FORM_MAP.action){
-    setMsg(
-      "err",
-      "The quote form is not connected yet."
-    );
+  if (!FORM_MAP || !FORM_MAP.action) {
+    setMsg("err", "The quote form is not connected yet. Please try again later.");
     return;
   }
 
-  const form=$("bookForm");
+  const form = $("bookForm");
 
-  if(!form.checkValidity()){
-    const invalid=form.querySelector(":invalid");
-
-    setMsg(
-      "err",
-      "Please complete all required fields."
-    );
-
-    if(invalid)invalid.focus();
+  if (!form.checkValidity()) {
+    const invalid = form.querySelector(":invalid");
+    setMsg("err", "Please complete all required fields.");
+    if (invalid) invalid.focus();
     return;
   }
 
-  const params=new URLSearchParams();
+  const params = new URLSearchParams();
 
-  const put=(title,value)=>{
-    const item=items[title];
-
-    if(
-      item&&
-      item.entry!=null&&
-      value!==""&&
-      value!=null
-    ){
-      params.append(
-        "entry."+item.entry,
-        value
-      );
+  const put = (title, value) => {
+    const item = items[title];
+    if (item && item.entry != null && value !== "" && value != null) {
+      params.append("entry." + item.entry, value);
     }
   };
 
-  put("Full name",$("name").value.trim());
-  put("Business name",$("biz").value.trim());
-  put("Email",$("email").value.trim());
-  put("Phone",$("phone").value.trim());
+  put("Full name", $("name").value.trim());
+  put("Business name", $("biz").value.trim());
+  put("Email", $("email").value.trim());
+  put("Phone", $("phone").value.trim());
+  put("Current website (if any)", $("site").value.trim());
+  put("Plan", $("pkg").value);
+  put("What does your business do?", $("what").value.trim());
 
-  put(
-    "Current website (if any)",
-    $("site").value.trim()
-  );
-
-  put("Plan",$("pkg").value);
-
-  put(
-    "What does your business do?",
-    $("what").value.trim()
-  );
-
-  document.querySelectorAll(
-    '#addons input[type="checkbox"]:checked'
-  ).forEach(cb=>{
-    put("Features you want",cb.value);
+  document.querySelectorAll('#addons input[type="checkbox"]:checked').forEach(cb => {
+    put("Features you want", cb.value);
   });
 
-  put(
-    "When do you want to launch?",
-    $("when").value
-  );
+  put("When do you want to launch?", $("when").value);
+  put("Anything else? (sites you like, colors, logo status)", $("notes").value.trim());
 
-  put(
-    "Anything else? (sites you like, colors, logo status)",
-    $("notes").value.trim()
-  );
-
-  if(
-    items["Contact consent"]&&
-    items["Contact consent"].choices&&
-    items["Contact consent"].choices.length
-  ){
-    put(
-      "Contact consent",
-      items["Contact consent"].choices[0]
-    );
+  if (items["Contact consent"] && items["Contact consent"].choices && items["Contact consent"].choices.length) {
+    put("Contact consent", items["Contact consent"].choices[0]);
   }
 
-  const button=$("submitBtn");
+  const button = $("submitBtn");
+  button.disabled = true;
+  button.textContent = "Sending\u2026";
 
-  button.disabled=true;
-  button.textContent="Sending...";
-
-  try{
-    await fetch(FORM_MAP.action,{
-      method:"POST",
-      mode:"no-cors",
-      body:params
-    });
-
+  try {
+    await fetch(FORM_MAP.action, { method:"POST", mode:"no-cors", body:params });
     form.reset();
     calc();
-
-    setMsg(
-      "ok",
-      "Request submitted. We'll follow up within one business day."
-    );
-
-  }catch(error){
-
-    setMsg(
-      "err",
-      "Something went wrong. Please try again."
-    );
-
-  }finally{
-
-    button.disabled=false;
-    button.textContent="Get My Quote →";
-
+    setMsg("ok", "Request submitted! We'll follow up within one business day.");
+  } catch (error) {
+    setMsg("err", "Something went wrong. Please try again.");
+  } finally {
+    button.disabled = false;
+    button.textContent = "Get My Quote \u2192";
   }
 });
 </script>
+
+</body>
+</html>
