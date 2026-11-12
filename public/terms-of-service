@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service | WebRite</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232F5BFF'/><path d='M20 36 L35 70 L50 46 L65 70 L84 25' fill='none' stroke='white' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta name="description" content="WebRite Terms of Service covering project scope, payments, care plans, ownership, third-party services, and liability for web design and automation projects.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --blue:#2F5BFF;
+  --ink:#0B0B12;
+  --bg:#EEF0F4;
+  --white:#FFFFFF;
+  --muted:#5A5F6E;
+  --line:#D9DCE4;
+}
+
+*{ box-sizing:border-box; }
+
+html,body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.5;
+}
+
+/* SITE MENU */
+
+.site-nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.site-nav .in{max-width:1100px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}
+.site-nav .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font:700 22px "Space Grotesk",Inter,sans-serif;letter-spacing:-1px}
+.site-nav .logo b{color:var(--blue);font-weight:700}
+.site-nav nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.site-nav nav a{color:var(--ink);text-decoration:none;font:600 14px Inter,sans-serif}
+.site-nav nav a:hover,.site-nav nav a[aria-current="page"]{color:var(--blue)}
+.site-nav nav a.nav-cta{background:var(--blue);color:#fff;padding:8px 16px;border-radius:50px}
+.site-nav nav a.nav-cta:hover{background:#2146DC;color:#fff}
+@media(max-width:560px){.site-nav .in{padding:10px 18px}.site-nav nav{gap:6px 14px}.site-nav nav a{font-size:13px}.site-nav nav a.nav-cta{padding:6px 12px}}
+
+.wrap{
+  max-width:1050px;
+  margin:0 auto;
+  padding:35px 22px 40px;
+}
+
+h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
+
+/* BRAND */
+
+.brand{
+  font-size:42px;
+  font-weight:700;
+  letter-spacing:-2px;
+  line-height:1.1;
+}
+
+.brand span{ color:var(--blue); }
+
+.tagline{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:var(--blue);
+}
+
+/* HEADER */
+
+.header{
+  padding-bottom:30px;
+  border-bottom:1px solid var(--line);
+}
+
+.header h1{
+  font-size:clamp(32px,5vw,44px);
+  margin:25px 0 12px;
+  letter-spacing:-1px;
+  line-height:1.1;
+}
+
+.header p{
+  color:var(--muted);
+  max-width:720px;
+  margin:0 0 12px;
+}
+
+.header .lead{
+  font-size:17px;
+  color:var(--ink);
+  font-weight:500;
+}
+
+.back{
+  display:inline-block;
+  margin-top:16px;
+  color:var(--blue);
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+
+.back:hover{ text-decoration:underline; }
+
+/* INTRO */
+
+.intro{
+  margin-top:30px;
+  padding:26px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+
+.intro h2{
+  font-size:25px;
+  margin:0 0 10px;
+  letter-spacing:-.5px;
+}
+
+.intro p{
+  color:var(--muted);
+  font-size:14px;
+  margin:0;
+  max-width:850px;
+}
+
+/* SECTION HEADINGS */
+
+.section-title{
+  font-size:28px;
+  margin:35px 0 17px;
+  letter-spacing:-.6px;
+}
+
+.section-note{
+  color:var(--muted);
+  font-size:14px;
+  margin:-7px 0 17px;
+}
+
+/* FAQ ACCORDION */
+
+.faq-group{
+  display:grid;
+  gap:12px;
+}
+
+.faq{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:15px;
+}
+
+.faq[open]{ border-color:#A9B8FF; }
+
+.faq summary{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:19px 22px;
+  cursor:pointer;
+  list-style:none;
+  font-size:15px;
+  font-weight:700;
+  color:var(--ink);
+}
+
+.faq summary::-webkit-details-marker{ display:none; }
+
+.faq summary:focus-visible{
+  outline:3px solid var(--blue);
+  outline-offset:2px;
+  border-radius:15px;
+}
+
+.faq summary::after{
+  content:"+";
+  flex:none;
+  width:29px;
+  height:29px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:9px;
+  background:#EDF1FF;
+  color:var(--blue);
+  font-family:"Space Grotesk",sans-serif;
+  font-size:21px;
+  font-weight:700;
+}
+
+.faq[open] summary::after{
+  content:"\2212";
+  background:var(--blue);
+  color:white;
+}
+
+.faq-answer{
+  padding:0 22px 20px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.75;
+}
+
+.faq-answer p{ margin:0 0 12px; }
+.faq-answer p:last-child{ margin-bottom:0; }
+
+.faq-answer ul{
+  margin:8px 0 12px;
+  padding-left:20px;
+}
+
+.faq-answer li{ margin:7px 0; }
+
+.faq-answer strong{ color:var(--ink); }
+
+.faq-answer a{
+  color:var(--blue);
+  font-weight:700;
+  text-decoration:none;
+}
+
+.faq-answer a:hover{ text-decoration:underline; }
+
+/* PRICING */
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-top:20px;
+}
+
+.price-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:21px;
+  min-width:0;
+}
+
+.price-card h3{
+  font-size:19px;
+  margin:0 0 9px;
+}
+
+.price-card .amount{
+  color:var(--blue);
+  font-family:"Space Grotesk",sans-serif;
+  font-size:23px;
+  font-weight:700;
+  letter-spacing:-.5px;
+}
+
+.price-card .monthly{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:10px;
+}
+
+.price-card.featured{
+  border:2px solid var(--blue);
+  padding:20px;
+}
+
+.price-note{
+  color:var(--muted);
+  font-size:12px;
+  margin:13px 0 0;
+}
+
+/* CTA */
+
+.cta{
+  margin-top:38px;
+  background:var(--ink);
+  color:white;
+  border-radius:18px;
+  padding:28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+}
+
+.cta h2{
+  font-size:27px;
+  margin:0 0 8px;
+}
+
+.cta p{
+  color:#C9CCD6;
+  font-size:14px;
+  margin:0;
+  max-width:560px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 23px;
+  background:var(--blue);
+  color:white;
+  border:0;
+  border-radius:999px;
+  font:700 15px Inter,sans-serif;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.btn:hover{ background:#2146DC; }
+
+/* FOOTER */
+
+.footer{
+  margin-top:50px;
+  padding-top:25px;
+  border-top:1px solid var(--line);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+}
+
+.footer .brand{ font-size:42px; }
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 18px;
+}
+
+.footer a{
+  color:var(--blue);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.footer a:hover{ text-decoration:underline; }
+
+.footer p{
+  width:100%;
+  font-size:12px;
+  color:var(--muted);
+  margin:0;
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+  .pricing{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
+/* MOBILE */
+
+@media(max-width:560px){
+  .wrap{ padding:25px 18px 30px; }
+  .header h1{ font-size:32px; }
+  .header{ padding-bottom:23px; }
+  .intro{
+    margin-top:23px;
+    padding:20px;
+  }
+  .intro h2{ font-size:23px; }
+  .section-title{
+    font-size:25px;
+    margin:30px 0 15px;
+  }
+  .faq-group{ gap:10px; }
+  .faq summary{
+    padding:17px;
+    font-size:14px;
+  }
+  .faq-answer{
+    padding:0 17px 18px;
+    font-size:13px;
+  }
+  .pricing{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .price-card{ padding:19px; }
+  .price-card.featured{ padding:18px; }
+  .cta{
+    flex-direction:column;
+    align-items:flex-start;
+    margin-top:30px;
+    padding:23px;
+  }
+  .cta h2{ font-size:24px; }
+  .btn{ width:100%; }
+  .footer{
+    margin-top:35px;
+    padding-top:20px;
+    gap:16px;
+  }
+  .footer .brand{ font-size:36px; }
+  .footer a{ font-size:13px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-nav">
+  <div class="in">
+    <a class="logo" href="/">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="25" fill="#2F5BFF"/><path d="M20 36 L35 70 L50 46 L65 70 L84 25" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Web<b>Rite</b></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/meet-your-builder">Meet Your Builder</a>
+      <a href="/faqs">FAQs</a>
+      <a class="nav-cta" href="/get-a-quote">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+
+  <section class="header">
+
+    <div class="brand">Web<span>Rite</span></div>
+    <div class="tagline">WEBSITES THAT WORK</div>
+
+    <h1>Terms of Service</h1>
+
+    <p class="lead">
+      Clear, transparent terms governing web design, development,
+      automation, and ongoing maintenance services.
+    </p>
+
+    <p>
+      Last Updated: November 2026. Please read these terms carefully before
+      initiating a project or retaining WebRite services.
+    </p>
+
+    <a class="back" href="/">&larr; Back to Homepage</a>
+
+  </section>
+
+  <!-- INTRO -->
+
+  <section class="intro">
+    <h2>Straightforward Partnership.</h2>
+    <p>
+      At WebRite, we believe client agreements should be as clear and accessible as our websites.
+      These Terms of Service outline our mutual expectations, payment schedules, asset ownership,
+      and operational boundaries for all projects and maintenance plans.
+    </p>
+  </section>
+
+  <h2 class="section-title">1. Scope of Work &amp; Project Estimates</h2>
+
+  <div class="faq-group">
+
+    <details class="faq" open>
+      <summary>1.1 Project Proposals &amp; Quotes</summary>
+      <div class="faq-answer">
+        <p>All development projects, custom automations, and redesigns are governed by an itemized project estimate or formal proposal generated via our <a href="/get-a-quote">Get a Quote</a> system.</p>
+        <p>Each proposal outlines specific deliverables, page structures, integrated tools (e.g., forms, SMS, scheduling), project timelines, and financial schedules. Work commences only upon mutual approval of the quote and receipt of the agreed initial deposit.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>1.2 Revisions &amp; Scope Expansion</summary>
+      <div class="faq-answer">
+        <p>Standard website packages include designated review rounds specified in your proposal to adjust copy, layout, and formatting prior to public deployment.</p>
+        <p>Requests for additional pages, third-party software integrations, custom programming, or substantial structural pivots not outlined in the initial proposal will be treated as out-of-scope work and billed under an approved change order or separate hourly rate.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>1.3 Client Assets &amp; Content Responsibilities</summary>
+      <div class="faq-answer">
+        <p>To maintain agreed project timelines, clients are responsible for providing high-resolution logos, brand guidelines, service copy, professional imagery, and essential legal policies applicable to their specific industry.</p>
+        <p>WebRite provides assistance in organizing, proofing, and styling provided text. Prolonged delays in supplying mandatory assets or approving milestone reviews may result in project delivery adjustments.</p>
+      </div>
+    </details>
+
+  </div>
+
+  <h2 class="section-title">2. Pricing, Invoicing &amp; Retainers</h2>
+
+  <div class="faq-group">
+
+    <details class="faq" open>
+      <summary>2.1 Project Deposits &amp; Milestones</summary>
+      <div class="faq-answer">
+        <p>Website builds typically require an upfront deposit (e.g., 50%) prior to production, with remaining balances due upon final review, prior to domain connection or full administrative handoff.</p>
+        <p>All invoiced amounts reflect fixed project costs for agreed deliverables. Payments are processed securely via electronic invoices or agreed electronic payment channels.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>2.2 Optional Monthly Website Care Plans</summary>
+      <div class="faq-answer">
+        <p>Ongoing website care and maintenance plans (e.g., Solo Care, Starter Care, Growth Care, Automation Support) are billed on a recurring monthly cycle starting on the date of activation.</p>
+        <p>Care plans cover routine content updates, technical checks, platform management, and automated workflow monitoring. Monthly retainers are cancelable at any time with a 14-day notice prior to the next billing cycle. Fees paid for current or prior service months are non-refundable.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>2.3 Third-Party Fees &amp; Software Subscriptions</summary>
+      <div class="faq-answer">
+        <p>WebRite service fees do not include independent recurring fees levied by third-party service providers. The client is directly responsible for expenses related to:</p>
+        <ul>
+          <li>Domain name registration and annual renewals</li>
+          <li>Cloud hosting, platform licenses, or Google Workspace accounts</li>
+          <li>Third-party SMS gateways, payment processors, and transactional message fees</li>
+          <li>Premium third-party plugins, APIs, or AI provider usage fees</li>
+        </ul>
+      </div>
+    </details>
+
+  </div>
+
+  <h2 class="section-title">3. Ownership, Domains &amp; Intellectual Property</h2>
+
+  <div class="faq-group">
+
+    <details class="faq" open>
+      <summary>3.1 Domain &amp; Account Ownership</summary>
+      <div class="faq-answer">
+        <p><strong>You own your domain.</strong> WebRite assists with DNS management, verification, and domain routing, but domain names must remain registered directly under the client's own domain registrar account.</p>
+        <p>The client retains direct ownership and control over their primary administrative business accounts, connected email services, and third-party business assets.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>3.2 Completed Website &amp; Design Assets</summary>
+      <div class="faq-answer">
+        <p>Upon complete settlement of all project invoices, full ownership of the completed front-end site layout, custom branding, and client-provided copy transfers directly to the client.</p>
+        <p>Third-party platforms (e.g., Google Sites, WordPress, web builders), open-source frameworks, underlying code libraries, and third-party software continue to be governed by their respective proprietary licenses and user agreements.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>3.3 Portfolio &amp; Promotional Rights</summary>
+      <div class="faq-answer">
+        <p>Unless explicitly negotiated otherwise in writing prior to project kickoff, WebRite reserves the right to showcase completed designs, screenshots, and publicly accessible site links within our agency portfolio, case studies, and social media demonstrations.</p>
+      </div>
+    </details>
+
+  </div>
+
+  <h2 class="section-title">4. Automation, Integrations &amp; Third-Party Services</h2>
+
+  <div class="faq-group">
+
+    <details class="faq">
+      <summary>4.1 Business Tools &amp; Webhooks</summary>
+      <div class="faq-answer">
+        <p>WebRite designs and connects workflow automations&mdash;including Google Forms data capture, Google Sheets organization, appointment schedulers, email notifications, and instant SMS alerts.</p>
+        <p>While WebRite implements reliable, tested connections, ongoing uptime and performance depend upon the third-party providers supplying the APIs, servers, and data channels.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>4.2 Service Outages &amp; Platform Changes</summary>
+      <div class="faq-answer">
+        <p>WebRite is not liable for system downtime, message delivery delays, API deprecation, or service disruptions caused by third-party hosts, telecommunication carriers, domain registrars, payment processors, or platform-wide outages.</p>
+        <p>Clients subscribed to an active Care Plan receive prioritized technical remediation to adapt integrations when external platforms update their requirements.</p>
+      </div>
+    </details>
+
+  </div>
+
+  <h2 class="section-title">5. Disclaimers, Liability &amp; Termination</h2>
+
+  <div class="faq-group">
+
+    <details class="faq">
+      <summary>5.1 Warranties &amp; Performance Disclaimers</summary>
+      <div class="faq-answer">
+        <p>WebRite builds responsive, clean, and modern websites designed to attract visitors and streamline conversions. However, WebRite cannot guarantee specific search engine rankings (SEO positions), website traffic volumes, or gross business sales figures, as these factors depend on market demand, independent ad spend, and client-run operations.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>5.2 Limitation of Liability</summary>
+      <div class="faq-answer">
+        <p>To the maximum extent permitted by applicable law, WebRite and its principal shall not be liable for any indirect, incidental, consequential, or punitive damages, including loss of profits, data corruption, or business interruption arising from the use or inability to use the website or integrated tools.</p>
+        <p>WebRite's total cumulative liability under any claim arising from a project or agreement shall not exceed the total fees actually paid by the client to WebRite for the specific service in dispute.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>5.3 Project Termination</summary>
+      <div class="faq-answer">
+        <p>Either party may terminate a project agreement upon written notice if the other party breaches material terms. In the event of early termination by the client, WebRite shall be compensated for all hours completed and deliverables produced up to the cancellation date, with the initial deposit remaining non-refundable to cover administrative setup.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>5.4 Governing Law</summary>
+      <div class="faq-answer">
+        <p>These Terms of Service and any project agreements shall be governed by and construed in accordance with the laws of the State of California, without regard to conflict of law principles.</p>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- CTA -->
+
+  <section class="cta">
+    <div>
+      <h2>Ready to Build Your Website?</h2>
+      <p>
+        Review our transparent packages or request a custom estimate
+        tailored to your exact business goals.
+      </p>
+    </div>
+    <a class="btn" href="/get-a-quote">Get a Quote &rarr;</a>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div>
+      <div class="brand">Web<span>Rite</span></div>
+      <div class="tagline">WEBSITES THAT WORK</div>
+    </div>
+
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/meet-your-builder">Meet Your Builder</a>
+      <a href="/get-a-quote">Get a Quote</a>
+      <a href="/faqs">FAQs</a>
+      <a href="/terms-of-service">Terms of Service</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+
+    <p>
+      &copy; 2026 WebRite &middot; Websites That Work.
+      Serving Riverside, the Inland Empire, Los Angeles,
+      Orange County, San Diego &amp; beyond.
+    </p>
+
+  </footer>
+
+</div>
+
+</body>
+</html>
