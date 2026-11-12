@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQs | WebRite</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232F5BFF'/><path d='M20 36 L35 70 L50 46 L65 70 L84 25' fill='none' stroke='white' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta name="description" content="Answers to common questions about WebRite website pricing, ownership, hosting, timelines, automation, and support for small businesses in Southern California and beyond.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --blue:#2F5BFF;
+  --ink:#0B0B12;
+  --bg:#EEF0F4;
+  --white:#FFFFFF;
+  --muted:#5A5F6E;
+  --line:#D9DCE4;
+}
+
+*{ box-sizing:border-box; }
+
+html,body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.5;
+}
+
+/* SITE MENU */
+
+.site-nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.site-nav .in{max-width:1100px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}
+.site-nav .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font:700 22px "Space Grotesk",Inter,sans-serif;letter-spacing:-1px}
+.site-nav .logo b{color:var(--blue);font-weight:700}
+.site-nav nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.site-nav nav a{color:var(--ink);text-decoration:none;font:600 14px Inter,sans-serif}
+.site-nav nav a:hover,.site-nav nav a[aria-current="page"]{color:var(--blue)}
+.site-nav nav a.nav-cta{background:var(--blue);color:#fff;padding:8px 16px;border-radius:50px}
+.site-nav nav a.nav-cta:hover{background:#2146DC;color:#fff}
+@media(max-width:560px){.site-nav .in{padding:10px 18px}.site-nav nav{gap:6px 14px}.site-nav nav a{font-size:13px}.site-nav nav a.nav-cta{padding:6px 12px}}
+
+.wrap{
+  max-width:1050px;
+  margin:0 auto;
+  padding:35px 22px 40px;
+}
+
+h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
+
+/* BRAND */
+
+.brand{
+  font-size:42px;
+  font-weight:700;
+  letter-spacing:-2px;
+  line-height:1.1;
+}
+
+.brand span{ color:var(--blue); }
+
+.tagline{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:var(--blue);
+}
+
+/* HEADER */
+
+.header{
+  padding-bottom:30px;
+  border-bottom:1px solid var(--line);
+}
+
+.header h1{
+  font-size:clamp(32px,5vw,44px);
+  margin:25px 0 12px;
+  letter-spacing:-1px;
+  line-height:1.1;
+}
+
+.header p{
+  color:var(--muted);
+  max-width:720px;
+  margin:0 0 12px;
+}
+
+.header .lead{
+  font-size:17px;
+  color:var(--ink);
+  font-weight:500;
+}
+
+.back{
+  display:inline-block;
+  margin-top:16px;
+  color:var(--blue);
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+
+.back:hover{ text-decoration:underline; }
+
+/* INTRO */
+
+.intro{
+  margin-top:30px;
+  padding:26px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+
+.intro h2{
+  font-size:25px;
+  margin:0 0 10px;
+  letter-spacing:-.5px;
+}
+
+.intro p{
+  color:var(--muted);
+  font-size:14px;
+  margin:0;
+  max-width:850px;
+}
+
+/* SECTION HEADINGS */
+
+.section-title{
+  font-size:28px;
+  margin:35px 0 17px;
+  letter-spacing:-.6px;
+}
+
+.section-note{
+  color:var(--muted);
+  font-size:14px;
+  margin:-7px 0 17px;
+}
+
+/* FAQ ACCORDION */
+
+.faq-group{
+  display:grid;
+  gap:12px;
+}
+
+.faq{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:15px;
+}
+
+.faq[open]{ border-color:#A9B8FF; }
+
+.faq summary{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:19px 22px;
+  cursor:pointer;
+  list-style:none;
+  font-size:15px;
+  font-weight:700;
+  color:var(--ink);
+}
+
+.faq summary::-webkit-details-marker{ display:none; }
+
+.faq summary:focus-visible{
+  outline:3px solid var(--blue);
+  outline-offset:2px;
+  border-radius:15px;
+}
+
+.faq summary::after{
+  content:"+";
+  flex:none;
+  width:29px;
+  height:29px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:9px;
+  background:#EDF1FF;
+  color:var(--blue);
+  font-family:"Space Grotesk",sans-serif;
+  font-size:21px;
+  font-weight:700;
+}
+
+.faq[open] summary::after{
+  content:"\2212";
+  background:var(--blue);
+  color:white;
+}
+
+.faq-answer{
+  padding:0 22px 20px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.75;
+}
+
+.faq-answer p{ margin:0 0 12px; }
+.faq-answer p:last-child{ margin-bottom:0; }
+
+.faq-answer ul{
+  margin:8px 0 12px;
+  padding-left:20px;
+}
+
+.faq-answer li{ margin:7px 0; }
+
+.faq-answer strong{ color:var(--ink); }
+
+.faq-answer a{
+  color:var(--blue);
+  font-weight:700;
+  text-decoration:none;
+}
+
+.faq-answer a:hover{ text-decoration:underline; }
+
+/* PRICING */
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  margin-top:20px;
+}
+
+.price-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:21px;
+  min-width:0;
+}
+
+.price-card h3{
+  font-size:19px;
+  margin:0 0 9px;
+}
+
+.price-card .amount{
+  color:var(--blue);
+  font-family:"Space Grotesk",sans-serif;
+  font-size:23px;
+  font-weight:700;
+  letter-spacing:-.5px;
+}
+
+.price-card .monthly{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:10px;
+}
+
+.price-card.featured{
+  border:2px solid var(--blue);
+  padding:20px;
+}
+
+.price-note{
+  color:var(--muted);
+  font-size:12px;
+  margin:13px 0 0;
+}
+
+/* CTA */
+
+.cta{
+  margin-top:38px;
+  background:var(--ink);
+  color:white;
+  border-radius:18px;
+  padding:28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+}
+
+.cta h2{
+  font-size:27px;
+  margin:0 0 8px;
+}
+
+.cta p{
+  color:#C9CCD6;
+  font-size:14px;
+  margin:0;
+  max-width:560px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 23px;
+  background:var(--blue);
+  color:white;
+  border:0;
+  border-radius:999px;
+  font:700 15px Inter,sans-serif;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.btn:hover{ background:#2146DC; }
+
+/* FOOTER */
+
+.footer{
+  margin-top:50px;
+  padding-top:25px;
+  border-top:1px solid var(--line);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+}
+
+.footer .brand{ font-size:42px; }
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 18px;
+}
+
+.footer a{
+  color:var(--blue);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.footer a:hover{ text-decoration:underline; }
+
+.footer p{
+  width:100%;
+  font-size:12px;
+  color:var(--muted);
+  margin:0;
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+  .pricing{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
+/* MOBILE */
+
+@media(max-width:560px){
+  .wrap{ padding:25px 18px 30px; }
+  .header h1{ font-size:32px; }
+  .header{ padding-bottom:23px; }
+  .intro{
+    margin-top:23px;
+    padding:20px;
+  }
+  .intro h2{ font-size:23px; }
+  .section-title{
+    font-size:25px;
+    margin:30px 0 15px;
+  }
+  .faq-group{ gap:10px; }
+  .faq summary{
+    padding:17px;
+    font-size:14px;
+  }
+  .faq-answer{
+    padding:0 17px 18px;
+    font-size:13px;
+  }
+  .pricing{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .price-card{ padding:19px; }
+  .price-card.featured{ padding:18px; }
+  .cta{
+    flex-direction:column;
+    align-items:flex-start;
+    margin-top:30px;
+    padding:23px;
+  }
+  .cta h2{ font-size:24px; }
+  .btn{ width:100%; }
+  .footer{
+    margin-top:35px;
+    padding-top:20px;
+    gap:16px;
+  }
+  .footer .brand{ font-size:36px; }
+  .footer a{ font-size:13px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-nav">
+  <div class="in">
+    <a class="logo" href="/">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="25" fill="#2F5BFF"/><path d="M20 36 L35 70 L50 46 L65 70 L84 25" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Web<b>Rite</b></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/meet-your-builder">Meet Your Builder</a>
+      <a href="/faqs" aria-current="page">FAQs</a>
+      <a class="nav-cta" href="/get-a-quote">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+
+  <section class="header">
+
+    <div class="brand">Web<span>Rite</span></div>
+    <div class="tagline">WEBSITES THAT WORK</div>
+
+    <h1>Frequently Asked Questions</h1>
+
+    <p class="lead">
+      Everything you need to know before building
+      your website with WebRite.
+    </p>
+
+    <p>
+      From pricing and ownership to hosting, automation,
+      and ongoing support, we've answered the questions
+      business owners ask most often.
+    </p>
+
+    <a class="back" href="/">&larr; Back to Homepage</a>
+
+  </section>
+
+  <!-- INTRO -->
+
+  <section class="intro">
+    <h2>Websites Made Simple.</h2>
+    <p>
+      Building a professional website shouldn't be complicated
+      or unnecessarily expensive. WebRite focuses on transparent
+      pricing, practical functionality, and websites that help
+      businesses attract customers and generate leads.
+    </p>
+  </section>
+
+  <!-- PRICING -->
+
+  <h2 class="section-title">Website Pricing</h2>
+
+  <p class="section-note">
+    Choose a package that fits your business today.
+    Additional features and automation can be added as you grow.
+  </p>
+
+  <div class="pricing">
+
+    <div class="price-card">
+      <h3>Solo</h3>
+      <div class="amount">$199&ndash;$299</div>
+      <div class="monthly">Optional care: $0&ndash;$35/month</div>
+    </div>
+
+    <div class="price-card">
+      <h3>Starter</h3>
+      <div class="amount">$399&ndash;$599</div>
+      <div class="monthly">Optional care: $25&ndash;$75/month</div>
+    </div>
+
+    <div class="price-card featured">
+      <h3>Growth</h3>
+      <div class="amount">$599&ndash;$899</div>
+      <div class="monthly">Optional care: $75&ndash;$129/month</div>
+    </div>
+
+    <div class="price-card">
+      <h3>Automation</h3>
+      <div class="amount">$699&ndash;$1,200+</div>
+      <div class="monthly">Optional care: $99&ndash;$199+/month</div>
+    </div>
+
+  </div>
+
+  <p class="price-note">
+    Prices are estimates based on project requirements.
+    Hosting, domain registration, premium software,
+    and third-party subscriptions may involve additional costs.
+  </p>
+
+  <!-- PRICING FAQ -->
+
+  <h2 class="section-title">Pricing &amp; Payments</h2>
+
+  <div class="faq-group">
+
+    <details class="faq">
+      <summary>How much does a website cost?</summary>
+      <div class="faq-answer">
+        <p>WebRite website packages start at <strong>$199</strong> for a simple online presence.</p>
+        <p>More advanced websites with multiple pages, lead generation tools, booking systems, or business automation typically cost more.</p>
+        <p>You can receive a personalized estimate through our <a href="/get-a-quote">Get a Quote</a> page.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Are there monthly fees?</summary>
+      <div class="faq-answer">
+        <p>Monthly website care is optional and depends on the services you need.</p>
+        <p>Maintenance plans can include website updates, content changes, technical assistance, and support for connected automation tools.</p>
+        <p>Separate hosting, domain, or third-party service charges may still apply.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Do I have to pay everything upfront?</summary>
+      <div class="faq-answer">
+        <p>Payment arrangements are discussed before work begins. Your project quote will outline the total cost, payment schedule, and included services.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can I upgrade my website later?</summary>
+      <div class="faq-answer">
+        <p>Absolutely. Your website can evolve as your business grows.</p>
+        <p>Additional pages, contact forms, appointment booking, automated notifications, and other features can be discussed after launch.</p>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- OWNERSHIP -->
+
+  <h2 class="section-title">Ownership &amp; Hosting</h2>
+
+  <div class="faq-group">
+
+    <details class="faq">
+      <summary>Will I own my website?</summary>
+      <div class="faq-answer">
+        <p>Your agreement will specify ownership of the completed website, original content, and design assets.</p>
+        <p>You maintain ownership of your business domain when it is registered in your name or account. Third-party platforms and software remain subject to their respective licensing terms.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Do I need to purchase a domain name?</summary>
+      <div class="faq-answer">
+        <p>A custom domain is recommended for a professional business website.</p>
+        <p>If you already own a domain, WebRite can help connect it to your new website.</p>
+        <p>If you don't have one, we can guide you through selecting and registering a domain.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>What is website hosting?</summary>
+      <div class="faq-answer">
+        <p>Website hosting is the service that makes your website accessible on the internet.</p>
+        <p>Depending on your project, your website may use a managed website platform or a separate hosting provider.</p>
+        <p>We'll discuss the appropriate setup before development.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can I use my existing hosting provider?</summary>
+      <div class="faq-answer">
+        <p>In many cases, yes. Compatibility depends on the platform and features your website requires.</p>
+        <p>WebRite can review your existing setup before recommending changes.</p>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- DEVELOPMENT -->
+
+  <h2 class="section-title">Website Design &amp; Development</h2>
+
+  <div class="faq-group">
+
+    <details class="faq">
+      <summary>How long does it take to build a website?</summary>
+      <div class="faq-answer">
+        <p>Timelines depend on the number of pages, design requirements, and requested functionality.</p>
+        <p>A simple website can often be completed faster than a larger project involving booking systems, integrations, or automation.</p>
+        <p>You'll receive a projected timeline before development begins.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Will my website work on mobile phones?</summary>
+      <div class="faq-answer">
+        <p>Yes. WebRite designs responsive websites that adapt to desktop computers, tablets, and smartphones.</p>
+        <p>Mobile usability is an important part of the development process.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can you redesign my existing website?</summary>
+      <div class="faq-answer">
+        <p>Yes. WebRite can help modernize an existing website's appearance, navigation, content structure, and functionality.</p>
+        <p>The scope depends on your current platform and the changes you want to make.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Do I need to provide the website content?</summary>
+      <div class="faq-answer">
+        <p>You'll need to provide important business details such as your services, contact information, preferred branding, and any required policies.</p>
+        <p>WebRite can assist with organizing and refining website copy as part of the project scope.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can I request changes during development?</summary>
+      <div class="faq-answer">
+        <p>Yes. Your project agreement will explain the review process and included revisions.</p>
+        <p>Major changes outside the original scope may require an updated quote.</p>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- AUTOMATION -->
+
+  <h2 class="section-title">Automation &amp; Business Tools</h2>
+
+  <div class="faq-group">
+
+    <details class="faq">
+      <summary>What is website automation?</summary>
+      <div class="faq-answer">
+        <p>Website automation connects your website to tools that perform repetitive tasks with less manual involvement.</p>
+        <p>Examples include:</p>
+        <ul>
+          <li>Automatic customer inquiry notifications</li>
+          <li>Appointment booking workflows</li>
+          <li>Instant estimate calculators</li>
+          <li>Lead collection and organization</li>
+          <li>Automated email or SMS responses</li>
+          <li>Customer intake forms</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can you connect my website to Google Forms?</summary>
+      <div class="faq-answer">
+        <p>Yes. Google Forms can be integrated into supported website workflows for collecting inquiries, applications, and customer information.</p>
+        <p>Depending on your requirements, collected data may also be organized through Google Sheets or connected automation services.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can my website send text message notifications?</summary>
+      <div class="faq-answer">
+        <p>Yes. Supported SMS integrations can notify you when customers submit forms, request appointments, or make inquiries.</p>
+        <p>SMS functionality may require a third-party provider and additional usage fees.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can you add AI to my website?</summary>
+      <div class="faq-answer">
+        <p>AI-powered features may be available depending on your business needs and the platform used.</p>
+        <p>Potential applications include automated customer responses, lead qualification, appointment assistance, and information collection.</p>
+        <p>These features are quoted separately based on their complexity and ongoing service requirements.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can my website accept payments?</summary>
+      <div class="faq-answer">
+        <p>Payment processing can be integrated into supported website platforms.</p>
+        <p>Depending on your business, this may include deposits, service payments, or customer checkout.</p>
+        <p>Payment providers typically charge their own transaction fees.</p>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- SUPPORT -->
+
+  <h2 class="section-title">Support &amp; Working With WebRite</h2>
+
+  <div class="faq-group">
+
+    <details class="faq">
+      <summary>Who will actually build my website?</summary>
+      <div class="faq-answer">
+        <p>You'll work directly with WebRite's founder throughout the website development process.</p>
+        <p>Learn more on our <a href="/meet-your-builder">Meet Your Builder</a> page.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>What happens after my website launches?</summary>
+      <div class="faq-answer">
+        <p>Once your website is completed, we'll review the agreed deliverables and launch requirements.</p>
+        <p>If you select an ongoing maintenance plan, WebRite can continue assisting with updates, support, and approved improvements.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Do you only work with businesses in California?</summary>
+      <div class="faq-answer">
+        <p>No. WebRite serves businesses remotely.</p>
+        <p>Our primary focus includes Riverside, the Inland Empire, Los Angeles, Orange County, and San Diego, but we can work with businesses throughout the United States.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>How do I get started?</summary>
+      <div class="faq-answer">
+        <p>Getting started is simple.</p>
+        <ul>
+          <li>Visit the Get a Quote page.</li>
+          <li>Select your preferred website package.</li>
+          <li>Choose any additional features.</li>
+          <li>Provide your business and contact information.</li>
+          <li>Submit your project inquiry for review.</li>
+        </ul>
+        <p><a href="/get-a-quote">Request Your Website Quote &rarr;</a></p>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- CTA -->
+
+  <section class="cta">
+    <div>
+      <h2>Still Have Questions?</h2>
+      <p>
+        Tell me about your business and what you want
+        your website to accomplish. I'll help you
+        identify the right starting point.
+      </p>
+    </div>
+    <a class="btn" href="/get-a-quote">Get My Quote &rarr;</a>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div>
+      <div class="brand">Web<span>Rite</span></div>
+      <div class="tagline">WEBSITES THAT WORK</div>
+    </div>
+
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/meet-your-builder">Meet Your Builder</a>
+      <a href="/get-a-quote">Get a Quote</a>
+      <a href="/faqs">FAQs</a>
+      <a href="/terms-of-service">Terms of Service</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+
+    <p>
+      &copy; 2026 WebRite &middot; Websites That Work.
+      Serving Riverside, the Inland Empire, Los Angeles,
+      Orange County, San Diego &amp; beyond.
+    </p>
+
+  </footer>
+
+</div>
+
+</body>
+</html>
