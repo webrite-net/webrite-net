@@ -460,6 +460,7 @@ h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
       <a href="/">Home</a>
       <a href="/meet-your-builder">Meet Your Builder</a>
       <a href="/faqs">FAQs</a>
+      <a href="/support">Support</a>
       <a class="nav-cta" href="/get-a-quote">Get a Quote</a>
     </nav>
   </div>
@@ -521,13 +522,14 @@ h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
     <details class="faq" open>
       <summary>1.1 Information you give us</summary>
       <div class="faq-answer">
-        <p>When you request a quote or contact us, we collect the information you choose to provide, such as:</p>
+        <p>When you request a quote, submit a support ticket, or contact us, we collect the information you choose to provide, such as:</p>
         <ul>
           <li>Your name and business name</li>
           <li>Email address and phone number</li>
           <li>Your current website, if you have one</li>
           <li>The plan, features, and launch timing you select</li>
           <li>Any notes you add about your business or project</li>
+          <li>Details of support requests, including any file or screenshot links you share</li>
         </ul>
         <p>You decide what to share. If you leave optional fields blank, we simply won&rsquo;t have that information.</p>
       </div>
@@ -555,6 +557,7 @@ h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
           <li>Prepare and send your website quote</li>
           <li>Contact you about your project by phone, text, or email</li>
           <li>Build, launch, and maintain the website you hire us for</li>
+          <li>Respond to and track your support tickets</li>
           <li>Send invoices and project updates</li>
           <li>Keep our website secure and working properly</li>
         </ul>
@@ -589,7 +592,7 @@ h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
         <p>To operate our business, some of your information is processed by trusted tools that work on our behalf, such as:</p>
         <ul>
           <li>Cloudflare, which hosts this website</li>
-          <li>Google (Forms, Sheets, and Gmail), which receives and stores quote requests and sends quote emails</li>
+          <li>Google (Forms, Sheets, and Gmail), which receives and stores quote requests and support tickets and sends related emails</li>
           <li>Text messaging providers, which deliver SMS notifications</li>
           <li>Payment processors, which handle invoices and payments</li>
         </ul>
@@ -696,6 +699,7 @@ h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
       <a href="/meet-your-builder">Meet Your Builder</a>
       <a href="/get-a-quote">Get a Quote</a>
       <a href="/faqs">FAQs</a>
+      <a href="/support">Support</a>
       <a href="/terms-of-service">Terms of Service</a>
       <a href="/privacy">Privacy</a>
     </div>
