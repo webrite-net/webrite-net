@@ -1,123 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Submit a Ticket | WebRite Support</title>
-  <meta name="description" content="Need a change, a fix or something new on your website? Submit a WebRite support ticket and get a ticket number by email.">
-  <link rel="icon" href="/favicon.ico" sizes="32x32">
-  <link rel="icon" href="/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* ===== Brand settings: change these to match the rest of webrite.net ===== */
-    :root {
-      --brand: #1f5eff;        /* main brand color (buttons, links, accents) */
-      --brand-dark: #1747c4;   /* hover state */
-      --ink: #14171f;          /* headings and body text */
-      --muted: #5b6272;        /* secondary text */
-      --bg: #ffffff;           /* page background */
-      --soft: #f4f6fb;         /* light section background */
-      --line: #e3e7ef;         /* borders */
-      --urgent: #d93025;       /* "site is down" callout */
-      --radius: 14px;
-      --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support | Submit a Ticket | WebRite</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232F5BFF'/><path d='M20 36 L35 70 L50 46 L65 70 L84 25' fill='none' stroke='white' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta name="description" content="WebRite client support. Submit a ticket for website changes, fixes, new pages, hosting or billing questions and get a ticket number by email.">
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font); color: var(--ink); background: var(--bg); line-height: 1.6; }
-    a { color: var(--brand); text-decoration: none; }
-    a:hover { color: var(--brand-dark); }
-    .wrap { width: min(1100px, 92%); margin: 0 auto; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    /* Header */
-    header { border-bottom: 1px solid var(--line); background: var(--bg); position: sticky; top: 0; z-index: 10; }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-    .logo { font-weight: 700; font-size: 1.35rem; color: var(--ink); letter-spacing: -0.02em; }
-    .logo span { color: var(--brand); }
-    .nav ul { display: flex; gap: 28px; list-style: none; }
-    .nav ul a { color: var(--muted); font-weight: 500; font-size: 0.95rem; }
-    .nav ul a:hover, .nav ul a[aria-current="page"] { color: var(--ink); }
-    .menu-btn { display: none; background: none; border: 0; font-size: 1.6rem; cursor: pointer; color: var(--ink); }
+<style>
+:root {
+  --blue:#2F5BFF;
+  --ink:#0B0B12;
+  --bg:#EEF0F4;
+  --white:#FFFFFF;
+  --muted:#5A5F6E;
+  --line:#D9DCE4;
+  --urgent:#D93025;
+}
 
-    /* Hero */
-    .hero { background: var(--soft); padding: 64px 0 56px; }
-    .eyebrow { display: inline-block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--brand); margin-bottom: 12px; }
-    .hero h1 { font-size: clamp(2rem, 4.5vw, 2.9rem); line-height: 1.15; letter-spacing: -0.025em; max-width: 16ch; }
-    .hero p { color: var(--muted); font-size: 1.1rem; max-width: 56ch; margin-top: 16px; }
+* { box-sizing:border-box; }
 
-    /* Layout */
-    .main { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 40px; padding: 48px 0 72px; align-items: start; }
+html,body {
+  margin:0;
+  padding:0;
+  height:auto;
+  overflow-x:hidden;
+  font-family:Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+}
 
-    /* Form card */
-    .form-card { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; }
-    .form-card iframe { display: block; width: 100%; height: 1650px; border: 0; }
+.wrap {
+  max-width:1100px;
+  margin:auto;
+  padding:35px 22px 90px;
+}
 
-    /* Sidebar */
-    aside { display: grid; gap: 20px; position: sticky; top: 92px; }
-    .box { border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; background: #fff; }
-    .box h2 { font-size: 1.05rem; margin-bottom: 12px; }
-    .urgent { border-color: color-mix(in srgb, var(--urgent) 35%, white); background: color-mix(in srgb, var(--urgent) 5%, white); }
-    .urgent h2 { color: var(--urgent); }
-    .urgent p { font-size: 0.95rem; color: var(--ink); }
-    .steps { list-style: none; counter-reset: s; display: grid; gap: 14px; }
-    .steps li { counter-increment: s; display: grid; grid-template-columns: 28px 1fr; gap: 10px; font-size: 0.95rem; color: var(--muted); }
-    .steps li::before { content: counter(s); width: 28px; height: 28px; border-radius: 50%; background: var(--brand); color: #fff;
-      font-weight: 600; font-size: 0.85rem; display: grid; place-items: center; }
-    .steps strong { color: var(--ink); font-weight: 600; }
-    .tips { list-style: none; display: grid; gap: 8px; font-size: 0.95rem; color: var(--muted); }
-    .tips li::before { content: "✓"; color: var(--brand); font-weight: 700; margin-right: 8px; }
-    .fallback { font-size: 0.9rem; color: var(--muted); }
+h1,h2,h3,.brand { font-family:"Space Grotesk",sans-serif; }
 
-    /* Footer */
-    footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 0.9rem; }
-    footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+/* SITE MENU (same as homepage) */
 
-    /* Mobile */
-    @media (max-width: 900px) {
-      .main { grid-template-columns: 1fr; }
-      aside { position: static; order: -1; }
-      .form-card iframe { height: 2000px; }
-    }
-    @media (max-width: 680px) {
-      .menu-btn { display: block; }
-      .nav ul { display: none; position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; gap: 0;
-        background: var(--bg); border-bottom: 1px solid var(--line); }
-      .nav ul.open { display: flex; }
-      .nav ul a { display: block; padding: 14px 4%; }
-      .hero { padding: 44px 0 40px; }
-      .form-card iframe { height: 2150px; }
-    }
-  </style>
+.site-nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.site-nav .in{max-width:1100px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}
+.site-nav .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font:700 22px "Space Grotesk",Inter,sans-serif;letter-spacing:-1px}
+.site-nav .logo b{color:var(--blue);font-weight:700}
+.site-nav nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.site-nav nav a{color:var(--ink);text-decoration:none;font:600 14px Inter,sans-serif}
+.site-nav nav a:hover,.site-nav nav a[aria-current="page"]{color:var(--blue)}
+.site-nav nav a.nav-cta{background:var(--blue);color:#fff;padding:8px 16px;border-radius:50px}
+.site-nav nav a.nav-cta:hover{background:#2146DC;color:#fff}
+@media(max-width:560px){.site-nav .in{padding:10px 18px}.site-nav nav{gap:6px 14px}.site-nav nav a{font-size:13px}.site-nav nav a.nav-cta{padding:6px 12px}}
+
+/* PAGE HEADER */
+
+.page-head {
+  background:linear-gradient(135deg,#142045,#0B0B12);
+  color:white;
+  padding:34px 32px;
+  border-radius:24px;
+  border:1px solid #29345E;
+}
+
+.eyebrow {
+  color:#AFC3FF;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:700;
+}
+
+.page-head h1 {
+  font-size:clamp(29px,4vw,43px);
+  line-height:1.12;
+  letter-spacing:-1.5px;
+  margin:10px 0 12px;
+}
+
+.page-head h1 span { color:#85A5FF; }
+
+.page-head p {
+  color:#D9E0F5;
+  font-size:15px;
+  max-width:640px;
+  margin:0;
+}
+
+/* LAYOUT */
+
+.support-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 320px;
+  gap:22px;
+  margin-top:24px;
+  align-items:start;
+}
+
+.form-card {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.form-card iframe {
+  display:block;
+  width:100%;
+  height:1650px;
+  border:0;
+}
+
+aside {
+  display:grid;
+  gap:16px;
+  position:sticky;
+  top:80px;
+}
+
+.box {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px;
+}
+
+.box h3 {
+  font-size:18px;
+  margin:0 0 10px;
+}
+
+.box p {
+  color:var(--muted);
+  font-size:14px;
+  margin:0;
+}
+
+.urgent {
+  border:2px solid var(--urgent);
+}
+
+.urgent h3 { color:var(--urgent); }
+.urgent p { color:var(--ink); }
+
+.steps {
+  list-style:none;
+  counter-reset:s;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:13px;
+}
+
+.steps li {
+  counter-increment:s;
+  display:grid;
+  grid-template-columns:28px 1fr;
+  gap:10px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.steps li::before {
+  content:counter(s);
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:var(--blue);
+  color:#fff;
+  font:700 13px "Space Grotesk",sans-serif;
+  display:grid;
+  place-items:center;
+}
+
+.steps strong { color:var(--ink); }
+
+.tips {
+  margin:0;
+  padding-left:20px;
+  color:#263557;
+  font-size:14px;
+}
+
+.tips li { margin:5px 0; }
+
+.fallback {
+  color:var(--muted);
+  font-size:13px;
+  margin:0;
+}
+
+.fallback a { color:var(--blue); font-weight:600; text-decoration:none; }
+
+/* FOOTER (same as homepage) */
+
+.footer {
+  margin-top:55px;
+  border-top:1px solid var(--line);
+  padding-top:28px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer .brand {
+  font-size:35px;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:-3px;
+}
+
+.brand span { color:var(--blue); }
+
+.tagline {
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:var(--blue);
+  margin-top:6px;
+}
+
+.footer h4 {
+  color:var(--blue);
+  margin:0 0 10px;
+  font-size:14px;
+}
+
+.footer a,
+.footer p {
+  display:block;
+  text-decoration:none;
+  color:var(--ink);
+  font-size:14px;
+  margin:0 0 8px;
+}
+
+.footer a:hover,.footer a[aria-current="page"] { color:var(--blue); }
+
+.footer-cols {
+  display:flex;
+  flex-wrap:wrap;
+  gap:35px;
+}
+
+.copyright {
+  width:100%;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+  .support-grid { grid-template-columns:1fr; }
+  aside { position:static; order:-1; }
+  .form-card iframe { height:2000px; }
+}
+
+@media(max-width:560px) {
+  .wrap { padding:25px 18px 75px; }
+  .page-head { padding:26px 20px; }
+  .page-head h1 { font-size:31px; }
+  .form-card iframe { height:2150px; }
+  .footer-cols { gap:25px; }
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <nav class="wrap nav" aria-label="Main">
-      <a href="/" class="logo">Web<span>Rite</span></a>
-      <button class="menu-btn" aria-label="Menu" aria-expanded="false"
-        onclick="const u=this.nextElementSibling;u.classList.toggle('open');this.setAttribute('aria-expanded',u.classList.contains('open'))">☰</button>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/#services">Services</a></li>
-        <li><a href="/#pricing">Pricing</a></li>
-        <li><a href="/support/" aria-current="page">Support</a></li>
-      </ul>
+<header class="site-nav">
+  <div class="in">
+    <a class="logo" href="/">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="25" fill="#2F5BFF"/><path d="M20 36 L35 70 L50 46 L65 70 L84 25" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Web<b>Rite</b></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/meet-your-builder">Meet Your Builder</a>
+      <a href="/faqs">FAQs</a>
+      <a href="/support" aria-current="page">Support</a>
+      <a class="nav-cta" href="/get-a-quote">Get a Quote</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <section class="hero">
-    <div class="wrap">
-      <span class="eyebrow">Client support</span>
-      <h1>Submit a ticket</h1>
-      <p>Need a change, a fix or something new on your website? Tell us what you need and you'll get a ticket number by email right away.</p>
-    </div>
+<div class="wrap">
+
+  <section class="page-head">
+    <div class="eyebrow">CLIENT SUPPORT</div>
+    <h1>Submit a <span>Support Ticket</span></h1>
+    <p>Need a change, a fix or something new on your website? Tell us what you need and you'll get a ticket number by email right away.</p>
   </section>
 
-  <div class="wrap main">
+  <div class="support-grid">
+
     <div class="form-card">
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSdxcRuatkasClBlGLPufSMuG6bYTqNc0eNqLIEavexOAPBu8w/viewform?embedded=true"
@@ -126,21 +307,21 @@
 
     <aside>
       <div class="box urgent">
-        <h2>Is your site down?</h2>
-        <p>Choose <strong>"Website is down"</strong> and <strong>Urgent</strong> on the form. Urgent tickets alert us immediately and are handled first.</p>
+        <h3>Is your site down?</h3>
+        <p>Choose <strong>"Website is down"</strong> and <strong>Urgent</strong> on the form. Urgent tickets alert us right away and are handled first.</p>
       </div>
 
       <div class="box">
-        <h2>What happens next</h2>
+        <h3>What happens next</h3>
         <ol class="steps">
-          <li><span><strong>You get a ticket number</strong> by email within a minute (WR-1001, for example).</span></li>
+          <li><span><strong>You get a ticket number</strong> by email within a minute, like WR-1001.</span></li>
           <li><span><strong>We review it</strong> and reach out the way you prefer if we have questions.</span></li>
           <li><span><strong>You get an email when it's done.</strong> Reply to it if anything isn't right.</span></li>
         </ol>
       </div>
 
       <div class="box">
-        <h2>Tips for a faster fix</h2>
+        <h3>Tips for a faster fix</h3>
         <ul class="tips">
           <li>Name the page that needs changing</li>
           <li>Paste the exact new wording</li>
@@ -151,15 +332,45 @@
 
       <p class="fallback">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxcRuatkasClBlGLPufSMuG6bYTqNc0eNqLIEavexOAPBu8w/viewform" target="_blank" rel="noopener">Open it in a new tab</a> or email <a href="mailto:support@webrite.net">support@webrite.net</a>.</p>
     </aside>
+
   </div>
 
-  <footer>
-    <div class="wrap">
-      <span>© <span id="yr"></span> WebRite. Websites that work.</span>
-      <a href="mailto:support@webrite.net">support@webrite.net</a>
+  <footer class="footer">
+
+    <div>
+      <div class="brand">Web<span>Rite</span></div>
+      <div class="tagline">WEBSITES THAT WORK</div>
     </div>
+
+    <div class="footer-cols">
+      <div>
+        <h4>Explore</h4>
+        <a href="/">Home</a>
+        <a href="/meet-your-builder">Meet Your Builder</a>
+        <a href="/get-a-quote">Get a Quote</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="/faqs">FAQs</a>
+        <a href="/support" aria-current="page">Support</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+      <div>
+        <h4>Service Areas</h4>
+        <p>Riverside</p>
+        <p>Inland Empire</p>
+        <p>Los Angeles</p>
+        <p>Orange County</p>
+        <p>San Diego</p>
+      </div>
+    </div>
+
+    <div class="copyright">&copy; 2026 WebRite &middot; Websites That Work.</div>
+
   </footer>
 
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</div>
+
 </body>
 </html>
