@@ -425,6 +425,7 @@ h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
       <a href="/">Home</a>
       <a href="/meet-your-builder">Meet Your Builder</a>
       <a href="/faqs" aria-current="page">FAQs</a>
+      <a href="/support">Support</a>
       <a class="nav-cta" href="/get-a-quote">Get a Quote</a>
     </nav>
   </div>
@@ -724,6 +725,14 @@ h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
     </details>
 
     <details class="faq">
+      <summary>How do I request a change or report a problem?</summary>
+      <div class="faq-answer">
+        <p>Existing clients can submit a ticket on our <a href="/support">Support</a> page. You'll get a ticket number by email right away and another email when the work is done.</p>
+        <p>If your website is down, choose <strong>"Website is down"</strong> and <strong>Urgent</strong> on the form so it's handled first.</p>
+      </div>
+    </details>
+
+    <details class="faq">
       <summary>Do you only work with businesses in California?</summary>
       <div class="faq-answer">
         <p>No. WebRite serves businesses remotely.</p>
@@ -776,6 +785,7 @@ h1,h2,h3,.brand{ font-family:"Space Grotesk",sans-serif; }
       <a href="/meet-your-builder">Meet Your Builder</a>
       <a href="/get-a-quote">Get a Quote</a>
       <a href="/faqs">FAQs</a>
+      <a href="/support">Support</a>
       <a href="/terms-of-service">Terms of Service</a>
       <a href="/privacy">Privacy</a>
     </div>
