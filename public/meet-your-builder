@@ -486,6 +486,7 @@ h2.section-title{
       <a href="/">Home</a>
       <a href="/meet-your-builder" aria-current="page">Meet Your Builder</a>
       <a href="/faqs">FAQs</a>
+      <a href="/support">Support</a>
       <a class="nav-cta" href="/get-a-quote">Get a Quote</a>
     </nav>
   </div>
@@ -705,6 +706,7 @@ h2.section-title{
       <a href="/meet-your-builder">Meet Your Builder</a>
       <a href="/get-a-quote">Get a Quote</a>
       <a href="/faqs">FAQs</a>
+      <a href="/support">Support</a>
       <a href="/terms-of-service">Terms of Service</a>
       <a href="/privacy">Privacy</a>
     </div>
