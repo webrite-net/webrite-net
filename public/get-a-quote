@@ -581,6 +581,7 @@ textarea{ min-height:95px; resize:vertical; }
       <a href="/">Home</a>
       <a href="/meet-your-builder">Meet Your Builder</a>
       <a href="/faqs">FAQs</a>
+      <a href="/support">Support</a>
       <a class="nav-cta" href="/get-a-quote" aria-current="page">Get a Quote</a>
     </nav>
   </div>
@@ -720,6 +721,7 @@ textarea{ min-height:95px; resize:vertical; }
       <a href="/meet-your-builder">Meet Your Builder</a>
       <a href="/get-a-quote">Get a Quote</a>
       <a href="/faqs">FAQs</a>
+      <a href="/support">Support</a>
       <a href="/terms-of-service">Terms of Service</a>
       <a href="/privacy">Privacy</a>
     </div>
@@ -746,8 +748,8 @@ const CONFIG = {
   packages:[
     {
       id:"Solo",
-      setup:"$199\u2013$299",
-      monthly:"Optional $0\u2013$35/mo",
+      setup:"$199–$299",
+      monthly:"Optional $0–$35/mo",
       featured:false,
       perks:[
         "Essential one-page website",
@@ -760,8 +762,8 @@ const CONFIG = {
     },
     {
       id:"Starter",
-      setup:"$399\u2013$599",
-      monthly:"Optional $25\u2013$75/mo",
+      setup:"$399–$599",
+      monthly:"Optional $25–$75/mo",
       featured:true,
       perks:[
         "Premium customized website",
@@ -774,8 +776,8 @@ const CONFIG = {
     },
     {
       id:"Growth",
-      setup:"$599\u2013$899",
-      monthly:"Optional $75\u2013$129/mo",
+      setup:"$599–$899",
+      monthly:"Optional $75–$129/mo",
       featured:false,
       perks:[
         "Everything in Starter",
@@ -787,8 +789,8 @@ const CONFIG = {
     },
     {
       id:"Automation",
-      setup:"$699\u2013$1,200+",
-      monthly:"Optional $99\u2013$199+/mo",
+      setup:"$699–$1,200+",
+      monthly:"Optional $99–$199+/mo",
       featured:false,
       perks:[
         "Custom business website",
@@ -845,7 +847,7 @@ const choicesFor = (title, fallback) => {
 
 $("plans").innerHTML = CONFIG.packages.map(p => `
   <article class="plan ${p.featured ? "featured" : ""}">
-    <h3>${p.id}${p.featured ? " \u00B7 Most Popular" : ""}</h3>
+    <h3>${p.id}${p.featured ? " · Most Popular" : ""}</h3>
     <div class="price">${p.setup}<small> setup</small></div>
     <div class="monthly-line">${p.monthly}</div>
     <ul>${p.perks.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
@@ -999,7 +1001,7 @@ $("bookForm").addEventListener("submit", async e => {
 
   const button = $("submitBtn");
   button.disabled = true;
-  button.textContent = "Sending\u2026";
+  button.textContent = "Sending…";
 
   try {
     await fetch(FORM_MAP.action, { method:"POST", mode:"no-cors", body:params });
@@ -1010,7 +1012,7 @@ $("bookForm").addEventListener("submit", async e => {
     setMsg("err", "Something went wrong. Please try again.");
   } finally {
     button.disabled = false;
-    button.textContent = "Get My Quote \u2192";
+    button.textContent = "Get My Quote →";
   }
 });
 </script>
